@@ -138,6 +138,39 @@
       color: rgba(15,23,42,.55);
     }
 
+    /* Supporters section */
+    .support-card{
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+  }
+
+  .support-card:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 24px 60px rgba(2, 6, 23, .14);
+    border-color: rgba(18,194,179,.28);
+  }
+
+  .support-logo-wrap{
+    height: 72px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+  }
+
+  .support-logo{
+    max-height: 56px;
+    max-width: 180px;
+    width: auto;
+    object-fit: contain;
+  }
+
+  .support-note{
+    max-width: 700px;
+  }
+
     footer{
       padding: 2.5rem 0 3rem;
       color: rgba(15,23,42,.65);
@@ -319,6 +352,73 @@
     </div>
   </section>
 
+  <!-- Supporters -->
+  <section id="supporters" class="section pt-0">
+    <div class="container">
+      <div class="glass p-4 p-md-5">
+        <div class="row align-items-end g-4 mb-4">
+          <div class="col-lg-8">
+            <div class="kicker mb-2">Community partners</div>
+            <h2 class="fw-bold mb-3">Built with the support of</h2>
+            <p class="text-secondary mb-0 support-note">
+              Our meetups are made possible thanks to these amazing coworking spaces in Riviera Maya.
+            </p>
+          </div>
+          <div class="col-lg-4">
+            <div class="small text-secondary">
+              Want to host a meetup or support the community?
+              <a class="text-decoration-none" href="mailto:hola@rivieramaya.tech">Get in touch</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="row g-3">
+          <div class="col-md-6">
+            <a
+              class="glass p-4 h-100 support-card"
+              href="https://nestcoworking.com.mx/"
+              target="_blank"
+              rel="noopener"
+            >
+              <div class="support-logo-wrap">
+                <img
+                  class="support-logo"
+                  src="assets/nest.jpg"
+                  alt="Coworking Space 1 logo"
+                >
+              </div>
+              <div class="fw-bold mb-1">Nest Coworking</div>
+              <div class="text-secondary small">
+                Host of our Playa del Carmen meetups.
+              </div>
+            </a>
+          </div>
+
+          <div class="col-md-6">
+            <a
+              class="glass p-4 h-100 support-card"
+              href="https://digitaljungle.org/"
+              target="_blank"
+              rel="noopener"
+            >
+              <div class="support-logo-wrap">
+                <img
+                  class="support-logo"
+                  src="assets/digitaljungle.png"
+                  alt="Coworking Space 2 logo"
+                >
+              </div>
+              <div class="fw-bold mb-1">Digital Jungle</div>
+              <div class="text-secondary small">
+                Host of our Tulum meetups.
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <footer>
     <div class="container">
       <div class="d-flex flex-column flex-md-row justify-content-between align-items-start gap-2">
@@ -332,6 +432,8 @@
           <a class="text-decoration-none" href="#why">Why</a>
           <span class="mx-2">•</span>
           <a class="text-decoration-none" href="#about">About</a>
+          <span class="mx-2">•</span>
+          <a class="text-decoration-none" href="#supporters">Supporters</a>
         </div>
       </div>
 
