@@ -171,6 +171,70 @@
     max-width: 700px;
   }
 
+  /* Meetups section */
+    .meetup-card{
+    overflow: hidden;
+  }
+
+  .meetup-flyer{
+    width: 100%;
+    border-radius: 18px;
+    display: block;
+    border: 1px solid rgba(15,23,42,.08);
+    box-shadow: 0 12px 30px rgba(2, 6, 23, .08);
+  }
+
+  .meetup-badge{
+    display: inline-flex;
+    align-items: center;
+    gap: .45rem;
+    padding: .42rem .8rem;
+    border-radius: 999px;
+    background: rgba(18,194,179,.10);
+    border: 1px solid rgba(18,194,179,.22);
+    color: var(--muted);
+    font-weight: 700;
+    font-size: .84rem;
+  }
+
+  .meetup-meta{
+    color: var(--muted);
+    font-size: .98rem;
+  }
+
+  .meetup-actions{
+    display: flex;
+    flex-wrap: wrap;
+    gap: .75rem;
+  }
+
+  .meetup-actions .btn{
+    border-radius: 999px;
+    font-weight: 700;
+  }
+
+  .flyer-btn{
+    background: rgba(255,255,255,.7);
+    border: 1px solid rgba(15,23,42,.12);
+    color: var(--ink);
+  }
+
+  .flyer-btn:hover{
+    background: rgba(255,255,255,.95);
+    border-color: rgba(15,23,42,.18);
+  }
+
+  .meetup-note{
+    max-width: 700px;
+  }
+
+  @media (max-width: 991.98px){
+    .meetup-flyer{
+      max-width: 520px;
+      margin: 0 auto;
+    }
+  }
+
     footer{
       padding: 2.5rem 0 3rem;
       color: rgba(15,23,42,.65);
@@ -193,6 +257,7 @@
         Riviera Maya Tech Builders
       </a>
       <div class="d-flex gap-2">
+        <a class="btn ghost btn-sm" href="#meetups">Meetups</a>
         <a class="btn ghost btn-sm" href="#about">About</a>
         <button
           class="btn btn-primary cta"
@@ -205,7 +270,6 @@
         >
           Contact
         </button>
-
       </div>
     </div>
   </nav>
@@ -259,6 +323,128 @@
       </div>
     </div>
   </header>
+  
+  <div class="soft-divider"></div>
+
+    <!-- Upcoming Meetups -->
+  <section id="meetups" class="section">
+    <div class="container">
+      <div class="row align-items-end g-4 mb-4">
+        <div class="col-lg-8">
+          <div class="kicker mb-2">Upcoming meetups</div>
+          <h2 class="fw-bold mb-3">Join the next builder meetups in Riviera Maya</h2>
+          <p class="text-secondary mb-0 meetup-note">
+            See what’s coming up, where it’s happening, and reserve your spot.
+            RSVP is required and spaces may be limited.
+          </p>
+        </div>
+      </div>
+
+      <div class="row g-4">
+        <!-- Meetup 1 -->
+        <div class="col-lg-6">
+          <div class="glass p-3 p-md-4 h-100 meetup-card">
+            <div class="mb-3">
+              <span class="meetup-badge">Next meetup</span>
+            </div>
+
+            <!-- <img
+              src="assets/flyer-pdc.png"
+              alt="Riviera Maya Tech Builders Product Hunt Launch Workshop flyer"
+              class="meetup-flyer mb-4"
+            > -->
+
+            <h3 class="h4 fw-bold mb-2">Product Hunt Launch Workshop</h3>
+            <div class="meetup-meta mb-1">March 18 · 6:00 PM – 8:00 PM</div>
+            <div class="meetup-meta mb-3">Nest Coworking · Playa del Carmen</div>
+
+            <p class="text-secondary mb-4">
+              A practical workshop for builders on how Product Hunt launches work and how to prepare for a successful launch.
+            </p>
+
+            <div class="meetup-actions">
+              <a
+                class="btn btn-primary cta"
+                href="https://www.meetup.com/riviera-maya-tech-builders/events/313558507/"
+                target="_blank"
+                rel="noopener"
+              >
+                RSVP on Meetup
+              </a>
+
+              <a
+                class="btn flyer-btn"
+                href="https://www.eventbrite.com.mx/e/riviera-maya-tech-builders-2-product-hunt-launch-workshop-tickets-1984783821840"
+                target="_blank"
+                rel="noopener"
+              >
+                Eventbrite
+              </a>
+
+              <a
+                class="btn flyer-btn"
+                href="assets/flyer-pdc.png"
+                download
+              >
+                Download flyer
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Meetup 2 -->
+        <div class="col-lg-6">
+          <div class="glass p-3 p-md-4 h-100 meetup-card">
+            <div class="mb-3">
+              <span class="meetup-badge">Tulum chapter</span>
+            </div>
+
+            <!-- <img
+              src="assets/flyer-tulum.png"
+              alt="Riviera Maya Tech Builders Tulum Chapter flyer"
+              class="meetup-flyer mb-4"
+            > -->
+
+            <h3 class="h4 fw-bold mb-2">Tulum Chapter Meetup</h3>
+            <div class="meetup-meta mb-1">April 25 · 10:00 AM – 12:30 PM</div>
+            <div class="meetup-meta mb-3">Digital Jungle · Tulum</div>
+
+            <p class="text-secondary mb-4">
+              A relaxed meetup for people building technology products to connect, exchange ideas, and spark collaborations.
+            </p>
+
+            <div class="meetup-actions">
+              <a
+                class="btn btn-primary cta"
+                href="https://www.meetup.com/riviera-maya-tech-builders/events/313715257/"
+                target="_blank"
+                rel="noopener"
+              >
+                RSVP on Meetup
+              </a>
+
+              <a
+                class="btn flyer-btn"
+                href="https://www.eventbrite.com.mx/e/riviera-maya-tech-builders-tulum-chapter-tickets-1984847531397"
+                target="_blank"
+                rel="noopener"
+              >
+                Eventbrite
+              </a>
+
+              <a
+                class="btn flyer-btn"
+                href="assets/flyer-tulum.png"
+                download
+              >
+                Download flyer
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <div class="soft-divider"></div>
 
@@ -341,9 +527,17 @@
               <p class="small text-secondary mb-3">
                 Answer this short form and we’ll loop you into the next meetup.
               </p>
-              <a class="btn btn-primary cta w-100" href="#tally-open=J9OvqK&tally-layout=modal&tally-width=374&tally-emoji-text=👋&tally-emoji-animation=heart-beat&tally-auto-close=3000">
+              <button
+                class="btn btn-primary cta w-100"
+                data-tally-open="J9OvqK"
+                data-tally-layout="modal"
+                data-tally-width="374"
+                data-tally-emoji-text="👋"
+                data-tally-emoji-animation="heart-beat"
+                data-tally-auto-close="3000"
+              >
                 Contact
-              </a>
+              </button>
               <div class="small text-muted mt-2">Takes ~1 minute.</div>
             </div>
           </div>
@@ -428,6 +622,8 @@
         </div>
         <div class="small">
           <a class="text-decoration-none" href="mailto:hola@rivieramaya.tech" target="_blank" rel="noopener">Contact</a>
+          <span class="mx-2">•</span>
+          <a class="text-decoration-none" href="#meetups">Meetups</a>
           <span class="mx-2">•</span>
           <a class="text-decoration-none" href="#why">Why</a>
           <span class="mx-2">•</span>
