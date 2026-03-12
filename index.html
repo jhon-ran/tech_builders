@@ -33,6 +33,81 @@
   <!-- Favicon -->
 <link rel="icon" href="assets/favicon.png">
 
+<!-- SON-LD event schema-->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://rivieramaya.tech/#organization",
+      "name": "Riviera Maya Tech Builders",
+      "url": "https://rivieramaya.tech/",
+      "logo": "https://rivieramaya.tech/assets/og-image.png",
+      "sameAs": [
+        "https://www.instagram.com/rivieramayatech",
+        "https://www.meetup.com/riviera-maya-tech-builders/",
+        "https://www.eventbrite.com.mx/e/riviera-maya-tech-builders-tulum-chapter-tickets-1984847531397"
+      ]
+    },
+    {
+      "@type": "Event",
+      "@id": "https://rivieramaya.tech/#event-pdc-2026-03-18",
+      "name": "Riviera Maya Tech Builders – Product Hunt Launch Workshop",
+      "description": "A practical workshop for builders on how Product Hunt launches work and how to prepare for a successful launch.",
+      "startDate": "2026-03-18T18:00:00-05:00",
+      "endDate": "2026-03-18T20:00:00-05:00",
+      "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+      "eventStatus": "https://schema.org/EventScheduled",
+      "image": [
+        "https://rivieramaya.tech/assets/og-image.png"
+      ],
+      "url": "https://www.meetup.com/riviera-maya-tech-builders/events/313558507/",
+      "organizer": {
+        "@id": "https://rivieramaya.tech/#organization"
+      },
+      "location": {
+        "@type": "Place",
+        "name": "Nest Coworking",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Playa del Carmen",
+          "addressRegion": "Quintana Roo",
+          "addressCountry": "MX"
+        }
+      }
+    },
+    {
+      "@type": "Event",
+      "@id": "https://rivieramaya.tech/#event-tulum-2026-04-25",
+      "name": "Riviera Maya Tech Builders – Tulum Chapter Meetup",
+      "description": "A relaxed meetup for people building technology products to connect, exchange ideas, and spark collaborations.",
+      "startDate": "2026-04-25T10:00:00-05:00",
+      "endDate": "2026-04-25T12:30:00-05:00",
+      "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+      "eventStatus": "https://schema.org/EventScheduled",
+      "image": [
+        "https://rivieramaya.tech/assets/og-image.png"
+      ],
+      "url": "https://www.meetup.com/riviera-maya-tech-builders/events/313715257/",
+      "organizer": {
+        "@id": "https://rivieramaya.tech/#organization"
+      },
+      "location": {
+        "@type": "Place",
+        "name": "Digital Jungle",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Tulum",
+          "addressRegion": "Quintana Roo",
+          "addressCountry": "MX"
+        }
+      }
+    }
+  ]
+}
+</script>
+
 <!-- Tally embed -->
 <script async src="https://tally.so/widgets/embed.js"></script>
 
@@ -597,7 +672,7 @@
                 <img
                   class="support-logo"
                   src="assets/nest.jpg"
-                  alt="Coworking Space 1 logo"
+                  alt="Nest Coworking logo"
                 >
               </div>
               <div class="fw-bold mb-1">Nest Coworking</div>
@@ -618,7 +693,7 @@
                 <img
                   class="support-logo"
                   src="assets/digitaljungle.png"
-                  alt="Coworking Space 2 logo"
+                  alt="Digital Jungle logo"
                 >
               </div>
               <div class="fw-bold mb-1">Digital Jungle</div>
