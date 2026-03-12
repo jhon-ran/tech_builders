@@ -108,6 +108,41 @@
 }
 </script>
 
+<!-- Organization schema ld json-->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://rivieramaya.tech/#website",
+      "url": "https://rivieramaya.tech/",
+      "name": "Riviera Maya Tech Builders",
+      "description": "A community for indie hackers, founders, and startup builders in Playa del Carmen, Tulum, and Cancun.",
+      "publisher": {
+        "@id": "https://rivieramaya.tech/#organization"
+      },
+      "inLanguage": "en"
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://rivieramaya.tech/#organization",
+      "name": "Riviera Maya Tech Builders",
+      "url": "https://rivieramaya.tech/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://rivieramaya.tech/assets/og-image.jpg"
+      },
+      "sameAs": [
+        "https://www.instagram.com/rivieramayatech",
+        "https://www.meetup.com/riviera-maya-tech-builders/",
+        "https://www.eventbrite.com/o/riviera-maya-tech-builders"
+      ]
+    }
+  ]
+}
+</script>
+
 <!-- Tally embed -->
 <script async src="https://tally.so/widgets/embed.js"></script>
 
