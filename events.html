@@ -5,18 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <!-- ── SEO: Primary ─────────────────────────────────────── -->
-  <title>Riviera Maya Tech Builders | Community for Founders & Indie Hackers</title>
-  <meta name="description" content="Monthly meetups for indie hackers, SaaS founders & startup builders in Playa del Carmen, Tulum, and Cancun. No sales-y vibes — just real builders shipping real products." />
+  <title>Riviera Maya Tech Builders Events | Meetups for Founders & Indie Hackers</title>
+  <meta name="description" content="See upcoming and past Riviera Maya Tech Builders events in Playa del Carmen and Tulum. Workshops, meetup recaps, RSVP links, and community updates for founders and indie hackers." />
   <meta name="author" content="Riviera Maya Tech Builders" />
-  <link rel="canonical" href="https://rivieramaya.tech/" />
+  <link rel="canonical" href="https://rivieramaya.tech/events" />
   <meta name="robots" content="index, follow" />
   <meta name="theme-color" content="#12c2b3" />
 
   <!-- ── SEO: Open Graph ──────────────────────────────────── -->
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://rivieramaya.tech/" />
-  <meta property="og:title" content="Riviera Maya Tech Builders | Community for Founders & Indie Hackers" />
-  <meta property="og:description" content="Monthly meetups for indie hackers, SaaS founders & startup builders in Playa del Carmen, Tulum, and Cancun. Join the community." />
+  <meta property="og:url" content="https://rivieramaya.tech/events" />
+  <meta property="og:title" content="Riviera Maya Tech Builders Events | Upcoming & Past Meetups" />
+  <meta property="og:description" content="See upcoming and past Riviera Maya Tech Builders events, meetup recaps, photos, and RSVP links." />
   <meta property="og:image" content="https://rivieramaya.tech/assets/og-image.png" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
@@ -25,8 +25,8 @@
 
   <!-- ── SEO: Twitter Card ────────────────────────────────── -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:url" content="https://rivieramaya.tech/" />
-  <meta name="twitter:title" content="Riviera Maya Tech Builders | Founders & Indie Hackers" />
+  <meta name="twitter:url" content="https://rivieramaya.tech/events" />
+  <meta name="twitter:title" content="Riviera Maya Tech Builders Events" />
   <meta name="twitter:description" content="Monthly meetups for indie hackers, SaaS founders & startup builders in Riviera Maya. Join the community." />
   <meta name="twitter:image" content="https://rivieramaya.tech/assets/og-image.png" />
   <meta name="twitter:site" content="@rivieramayatech" />
@@ -41,18 +41,14 @@
     "@context": "https://schema.org",
     "@graph": [
       {
-        "@type": "WebSite",
-        "@id": "https://rivieramaya.tech/#website",
-        "url": "https://rivieramaya.tech/",
-        "name": "Riviera Maya Tech Builders",
-        "description": "A community for indie hackers, founders, and startup builders in Playa del Carmen, Tulum, and Cancun.",
-        "publisher": { "@id": "https://rivieramaya.tech/#organization" },
-        "inLanguage": "en",
-        "potentialAction": {
-          "@type": "SearchAction",
-          "target": "https://rivieramaya.tech/?s={search_term_string}",
-          "query-input": "required name=search_term_string"
-        }
+        "@type": "CollectionPage",
+        "@id": "https://rivieramaya.tech/events#webpage",
+        "url": "https://rivieramaya.tech/events",
+        "name": "Riviera Maya Tech Builders Events",
+        "description": "Upcoming and past Riviera Maya Tech Builders events for founders, indie hackers, and startup builders.",
+        "isPartOf": { "@id": "https://rivieramaya.tech/#website" },
+        "about": { "@id": "https://rivieramaya.tech/#organization" },
+        "inLanguage": "en"
       },
       {
         "@type": "Organization",
@@ -78,7 +74,7 @@
       },
       {
         "@type": "Event",
-        "@id": "https://rivieramaya.tech/#event-pdc-2026-03-18",
+        "@id": "https://rivieramaya.tech/events#event-product-hunt",
         "name": "Riviera Maya Tech Builders – Product Hunt Launch Workshop",
         "description": "A practical workshop for builders on how Product Hunt launches work and how to prepare for a successful launch.",
         "startDate": "2026-03-18T18:00:00-05:00",
@@ -101,8 +97,8 @@
       },
       {
         "@type": "Event",
-        "@id": "https://rivieramaya.tech/#event-tulum-2026-04-25",
-        "name": "Riviera Maya Tech Builders – Tulum Chapter Meetup",
+        "@id": "https://rivieramaya.tech/events#event-tulum",
+        "name": "Riviera Maya Tech Builders – Tulum Chapter Builders Meetup",
         "description": "A relaxed meetup for people building technology products to connect, exchange ideas, and spark collaborations.",
         "startDate": "2026-04-25T10:00:00-05:00",
         "endDate": "2026-04-25T12:30:00-05:00",
@@ -529,6 +525,61 @@
     .delay-2 { transition-delay: .18s; }
     .delay-3 { transition-delay: .28s; }
     .delay-4 { transition-delay: .38s; }
+
+    .events-hero {
+      padding-top: calc(var(--nav-h) + 4rem);
+      padding-bottom: 3rem;
+    }
+    .eyebrow-link {
+      color: var(--sea);
+      font-weight: 700;
+      text-decoration: none;
+    }
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 1rem;
+    }
+    .stat-card {
+      padding: 1.1rem 1rem;
+      border-radius: 22px;
+      background: rgba(255,255,255,.78);
+      border: 1px solid rgba(15,23,42,.06);
+      box-shadow: var(--shadow);
+    }
+    .stat-value { font-size: 1.4rem; font-weight: 800; line-height: 1; margin-bottom: .35rem; }
+    .event-detail-card { position: relative; }
+    .event-link-row { display:flex; flex-wrap:wrap; gap:.75rem; margin-top:1.25rem; }
+    .event-detail-list { display:grid; gap:.65rem; margin: 1rem 0 0; }
+    .event-detail-list div { color: var(--muted); }
+    .section-note { max-width: 760px; }
+    .archive-photo {
+      width: 100%;
+      height: 240px;
+      object-fit: cover;
+      object-position: center;
+      border-radius: 16px;
+      border: 1px solid rgba(15,23,42,.06);
+      margin-bottom: 1rem;
+      display: block;
+      box-shadow: 0 10px 25px rgba(2,6,23,.08);
+      transition: transform .25s ease, box-shadow .25s ease;
+    }
+
+    .archive-photo:hover {
+      transform: scale(1.02);
+      box-shadow: 0 16px 40px rgba(2,6,23,.12);
+    }
+
+    .micro-pill {
+      display:inline-flex; align-items:center; gap:.4rem; padding:.42rem .78rem; border-radius:999px;
+      background: rgba(18,194,179,.10); color: var(--ink); font-size:.84rem; font-weight:600;
+    }
+    .archive-year { font-size: .9rem; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+    .instagram-card { background: linear-gradient(135deg, rgba(18,194,179,.14), rgba(11,119,138,.10)); }
+    @media (max-width: 991px) { .stats-grid { grid-template-columns: repeat(2, minmax(0,1fr)); } }
+    @media (max-width: 575px) { .stats-grid { grid-template-columns: 1fr; } }
+
   </style>
 </head>
 
@@ -538,382 +589,253 @@
   <!-- ════════════════ NAV ════════════════ -->
   <nav class="navbar" id="mainNav" role="navigation" aria-label="Main navigation">
     <div class="container">
-
-      <a class="navbar-brand fw-bold" href="/" aria-label="Riviera Maya Tech Builders – home">
-        <span class="brand-dot" aria-hidden="true"></span>
-        <span class="brand-name">Riviera Maya Tech Builders</span>
-        <span class="brand-name-short">RM Tech Builders</span>
+      <a class="navbar-brand fw-bold" href="index.html">
+        <span class="brand-dot"></span>
+        Riviera Maya Tech Builders
       </a>
-
-      <div class="nav-actions">
-        <a class="btn ghost btn-sm" href="#meetups">Meetups</a>
-        <a class="btn ghost btn-sm" href="#about">About</a>
+      <div class="d-flex gap-2 nav-actions">
+        <a class="btn ghost btn-sm" href="index.html#meetups">Meetups</a>
+        <a class="btn ghost btn-sm" href="events.html" aria-current="page">Events</a>
+        <a class="btn ghost btn-sm" href="index.html#about">About</a>
         <button
-          class="btn cta btn-sm"
+          class="btn btn-primary cta"
           data-tally-open="J9OvqK"
           data-tally-layout="modal"
           data-tally-width="374"
           data-tally-emoji-text="👋"
           data-tally-emoji-animation="heart-beat"
           data-tally-auto-close="3000"
-          aria-label="Join the community"
+          aria-label="Open form to join the community"
         >
           Join
         </button>
       </div>
-
     </div>
   </nav>
 
-  <!-- ════════════════ HERO ════════════════ -->
-  <header class="hero" role="banner" id="main-content">
-    <div class="container">
-      <div class="row align-items-center g-4 g-lg-5">
-
-        <!-- Copy -->
-        <div class="col-lg-6">
-          <div class="pill mb-3 fade-up visible">
-            <span aria-hidden="true">🏝️</span>
-            Indie hackers · founders · startup builders
-          </div>
-
-          <h1 class="headline display-4 mb-3 fade-up visible">
-            A people-first tech builder community in Riviera Maya
-          </h1>
-
-          <p class="lead mb-4 fade-up visible delay-1">
-            Join builders who are actually shipping products. Share what you're working on, swap feedback, and find collaborators in a relaxed, beachy, conversation-driven vibe.
-          </p>
-
-          <div class="d-flex flex-wrap gap-3 mb-3 fade-up visible delay-2">
-            <button
-              class="btn cta"
-              data-tally-open="J9OvqK"
-              data-tally-layout="modal"
-              data-tally-width="374"
-              data-tally-emoji-text="👋"
-              data-tally-emoji-animation="heart-beat"
-              data-tally-auto-close="3000"
-              aria-label="Open form to join the community"
-            >
-              Join the community →
-            </button>
-            <a class="btn ghost" href="#meetups">See upcoming meetups</a>
-          </div>
-
-          <p class="small text-muted mb-0 fade-up visible delay-3">
-            ✓ Monthly meetups &nbsp;·&nbsp; ✓ No sales-y vibes &nbsp;·&nbsp; ✓ Real builders
-          </p>
-        </div>
-
-        <!-- Hero image -->
-        <div class="col-lg-6 fade-up visible delay-1">
-          <div class="glass p-2">
-            <img
-              class="hero-img"
-              src="assets/hero.jpg"
-              alt="Tech builders collaborating in a tropical coworking space in Riviera Maya"
-              width="640" height="480"
-              loading="eager"
-              fetchpriority="high"
-            />
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </header>
-
-  <div class="soft-divider"></div>
-
-  <!-- ════════════════ MEETUPS ════════════════ -->
-  <section id="meetups" class="section" aria-labelledby="meetups-heading">
-    <div class="container">
-      <div class="row align-items-end g-4 mb-4">
-        <div class="col-lg-8 fade-up">
-          <div class="kicker mb-2">Upcoming meetups</div>
-          <h2 class="fw-bold mb-3" id="meetups-heading">Join the next builder meetups in Riviera Maya</h2>
-          <p class="text-secondary mb-2" style="max-width:640px">
-            See what's coming up, where it's happening, and reserve your spot.
-            RSVP is required — spaces are limited.
-          </p>
-          <a href="events.html" class="fw-bold" style="color:var(--sea)">See all event details and past meetups →</a>
-        </div>
-      </div>
-
-      <div class="row g-4">
-
-        <!-- Meetup 1 – PDC -->
-        <div class="col-lg-6 fade-up delay-1">
-          <div class="glass p-3 p-md-4 meetup-card d-flex flex-column h-100">
-            <div class="d-flex align-items-center justify-content-between mb-3">
-              <span class="meetup-badge upcoming">Next meetup</span>
-              <span class="date-chip"><span aria-hidden="true">📅</span> <time datetime="2026-03-18">Mar 18</time></span>
-            </div>
-
-            <h3 class="h4 fw-bold mb-2">Product Hunt Launch Workshop</h3>
-            <div class="meetup-meta mb-1" data-icon="🕕">March 18 · 6:00 PM – 8:00 PM</div>
-            <div class="meetup-meta mb-3" data-icon="📍">Nest Coworking · Playa del Carmen</div>
-
-            <p class="text-secondary mb-4">
-              A practical workshop for builders on how Product Hunt launches work and how to prepare for a successful launch. Bring your product — let's build it together.
-            </p>
-
-            <div class="meetup-actions mt-auto">
-              <a
-                class="btn cta"
-                href="https://www.meetup.com/riviera-maya-tech-builders/events/313558507/"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="RSVP on Meetup for Product Hunt Workshop"
-              >
-                RSVP on Meetup
-              </a>
-              <a class="btn flyer-btn" href="events.html#event-product-hunt">
-                View details
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Meetup 2 – Tulum -->
-        <div class="col-lg-6 fade-up delay-2">
-          <div class="glass p-3 p-md-4 meetup-card d-flex flex-column h-100">
-            <div class="d-flex align-items-center justify-content-between mb-3">
-              <span class="meetup-badge">Tulum chapter</span>
-              <span class="date-chip"><span aria-hidden="true">📅</span> <time datetime="2026-04-25">Apr 25</time></span>
-            </div>
-
-            <h3 class="h4 fw-bold mb-2">Tulum Chapter Meetup</h3>
-            <div class="meetup-meta mb-1" data-icon="🕙">April 25 · 10:00 AM – 12:30 PM</div>
-            <div class="meetup-meta mb-3" data-icon="📍">Digital Jungle · Tulum</div>
-
-            <p class="text-secondary mb-4">
-              A relaxed meetup for people building technology products to connect, exchange ideas, and spark collaborations. Jungle vibes, builder energy.
-            </p>
-
-            <div class="meetup-actions mt-auto">
-              <a
-                class="btn cta"
-                href="https://www.meetup.com/riviera-maya-tech-builders/events/313715257/"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="RSVP on Meetup for Tulum Chapter"
-              >
-                RSVP on Meetup
-              </a>
-              <a class="btn flyer-btn" href="events.html#event-tulum">
-                View details
-              </a>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <div class="soft-divider"></div>
-
-  <!-- ════════════════ WHY ════════════════ -->
-  <section id="why" class="section" aria-labelledby="why-heading">
-    <div class="container">
-      <div class="row g-4 g-lg-5 align-items-stretch">
-
-        <div class="col-lg-5 fade-up">
-          <div class="kicker mb-2">Why this community</div>
-          <h2 class="fw-bold mb-3" id="why-heading">Riviera Maya has the ingredients — it just needed the synergy.</h2>
-          <p class="text-secondary mb-0" style="line-height:1.7">
-            Builders are here, but often working in isolation. We're creating a consistent place to meet peers,
-            talk product, and grow the local tech-builder network.
-          </p>
-        </div>
-
-        <div class="col-lg-7">
-          <div class="row g-3">
-            <div class="col-md-4 fade-up delay-1">
-              <div class="glass p-4 h-100">
-                <div class="icon mb-3" aria-hidden="true">🌍</div>
-                <div class="fw-bold mb-1">Global talent</div>
-                <div class="text-secondary small">A magnet for international founders &amp; remote builders.</div>
-              </div>
-            </div>
-            <div class="col-md-4 fade-up delay-2">
-              <div class="glass p-4 h-100">
-                <div class="icon mb-3" aria-hidden="true">📶</div>
-                <div class="fw-bold mb-1">Strong infrastructure</div>
-                <div class="text-secondary small">Fiber connectivity + modern coworking spaces.</div>
-              </div>
-            </div>
-            <div class="col-md-4 fade-up delay-3">
-              <div class="glass p-4 h-100">
-                <div class="icon mb-3" aria-hidden="true">🌞</div>
-                <div class="fw-bold mb-1">Unbeatable lifestyle</div>
-                <div class="text-secondary small">Work, culture, and nature — all in one place.</div>
-              </div>
-            </div>
-          </div>
-
-          <div class="glass p-4 mt-3 fade-up delay-2">
-            <div class="fw-bold mb-2">Who it's for</div>
-            <div class="d-flex flex-wrap gap-2" role="list" aria-label="Community member types">
-              <span class="badge rounded-pill text-bg-light border" role="listitem">Indie hackers</span>
-              <span class="badge rounded-pill text-bg-light border" role="listitem">Micro-SaaS founders</span>
-              <span class="badge rounded-pill text-bg-light border" role="listitem">SaaS &amp; startup builders</span>
-              <span class="badge rounded-pill text-bg-light border" role="listitem">Technical founders</span>
-              <span class="badge rounded-pill text-bg-light border" role="listitem">Engineers</span>
-              <span class="badge rounded-pill text-bg-light border" role="listitem">Product-driven agency owners</span>
-            </div>
-            <div class="text-secondary small mt-2">
-              Size doesn't matter — building does.
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <div class="soft-divider"></div>
-
-  <!-- ════════════════ ABOUT / HOW WE ROLL ════════════════ -->
-  <section id="about" class="section" aria-labelledby="about-heading">
-    <div class="container">
-      <div class="glass p-4 p-md-5 fade-up">
+  <main id="main-content">
+    <section class="section events-hero" aria-labelledby="events-heading">
+      <div class="container">
         <div class="row g-4 align-items-center">
-
-          <div class="col-lg-8">
-            <div class="kicker mb-2">How we roll</div>
-            <h2 class="fw-bold mb-3" id="about-heading">Simple, friendly, and laidback</h2>
-            <div class="row g-3 mt-1">
-              <div class="col-sm-6">
-                <div class="d-flex gap-3 align-items-start">
-                  <span aria-hidden="true" style="font-size:1.35rem;line-height:1.1">📅</span>
-                  <div>
-                    <div class="fw-bold small mb-1">Monthly / bimonthly meetups</div>
-                    <div class="text-secondary small">Talks, workshops, and informal sessions.</div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-sm-6">
-                <div class="d-flex gap-3 align-items-start">
-                  <span aria-hidden="true" style="font-size:1.35rem;line-height:1.1">🚫</span>
-                  <div>
-                    <div class="fw-bold small mb-1">Conversation-driven</div>
-                    <div class="text-secondary small">Not sales-driven. Never will be.</div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-sm-6">
-                <div class="d-flex gap-3 align-items-start">
-                  <span aria-hidden="true" style="font-size:1.35rem;line-height:1.1">🧠</span>
-                  <div>
-                    <div class="fw-bold small mb-1">Bring what you're building</div>
-                    <div class="text-secondary small">Share progress — and what you're stuck on.</div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-sm-6">
-                <div class="d-flex gap-3 align-items-start">
-                  <span aria-hidden="true" style="font-size:1.35rem;line-height:1.1">✨</span>
-                  <div>
-                    <div class="fw-bold small mb-1">Leave with value</div>
-                    <div class="text-secondary small">Feedback, ideas, and new connections every time.</div>
-                  </div>
-                </div>
+          <div class="col-lg-7 fade-up visible">
+            <div class="kicker mb-2">Events hub</div>
+            <h1 class="display-5 fw-bold mb-3" id="events-heading">Upcoming and past events for tech builders in Riviera Maya</h1>
+            <p class="lead text-secondary mb-4" style="max-width:720px">
+              Explore upcoming meetups, RSVP links, flyers, and recap highlights from Riviera Maya Tech Builders. From practical workshops to relaxed builder meetups, this is the home for our events in Playa del Carmen and Tulum.
+            </p>
+            <div class="d-flex flex-wrap gap-2 mb-3">
+              <span class="micro-pill"><span aria-hidden="true">👥</span> 28+ builders</span>
+              <span class="micro-pill"><span aria-hidden="true">📍</span> Playa del Carmen + Tulum</span>
+              <span class="micro-pill"><span aria-hidden="true">🏢</span> 2 coworking partners</span>
+              <span class="micro-pill"><span aria-hidden="true">🗓️</span> Monthly rhythm</span>
+            </div>
+            <div class="d-flex flex-wrap gap-3">
+              <a class="btn cta" href="#upcoming-events">See upcoming events</a>
+              <a class="btn flyer-btn" href="#past-events">Browse past meetups</a>
+            </div>
+          </div>
+          <div class="col-lg-5 fade-up delay-1 visible">
+            <div class="glass p-4 p-md-5">
+              <div class="kicker mb-2">Our events</div>
+              <div class="fw-bold mb-3">What you will find here</div>
+              <div class="text-secondary section-note">
+                Upcoming events, direct RSVP links, downloadable flyers, and a growing archive of meetup recaps.
               </div>
             </div>
           </div>
-
-          <!-- CTA card -->
-          <div class="col-lg-4 fade-up delay-1">
-            <div class="glass-sand p-4 text-center">
-              <div style="font-size:2rem;margin-bottom:.6rem" aria-hidden="true">🌊</div>
-              <div class="fw-bold mb-2">Want to join or collaborate?</div>
-              <p class="small text-secondary mb-3">
-                Answer this short form and we'll loop you into the next meetup.
-              </p>
-              <button
-                class="btn cta w-100 justify-content-center"
-                data-tally-open="J9OvqK"
-                data-tally-layout="modal"
-                data-tally-width="374"
-                data-tally-emoji-text="👋"
-                data-tally-emoji-animation="heart-beat"
-                data-tally-auto-close="3000"
-                aria-label="Open form to join the community"
-              >
-                Join →
-              </button>
-              <div class="small text-muted mt-2">No spam. Just meetup updates.</div>
-            </div>
-          </div>
-
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ════════════════ SUPPORTERS ════════════════ -->
-  <section id="supporters" class="section pt-0" aria-labelledby="supporters-heading">
-    <div class="container">
-      <div class="glass p-4 p-md-5 fade-up">
+    <section class="section pt-0" aria-labelledby="community-snapshot-heading">
+      <div class="container">
+        <div class="glass p-4 p-md-5 fade-up visible">
+          <div class="row align-items-end g-4 mb-4">
+            <div class="col-lg-8">
+              <div class="kicker mb-2">Community snapshot</div>
+              <h2 class="fw-bold mb-2" id="community-snapshot-heading">A growing community</h2>
+              <p class="text-secondary mb-0 section-note">
+                A growing community for founders, indie hackers, and startup builders who want to meet peers, exchange feedback, and build real technology products from Riviera Maya.
+              </p>
+            </div>
+          </div>
+          <div class="stats-grid">
+            <div class="stat-card">
+              <div class="stat-value">28+</div>
+              <div class="small text-secondary">Builders currently in the Meetup community</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-value">2</div>
+              <div class="small text-secondary">Cities with active meetup momentum</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-value">2</div>
+              <div class="small text-secondary">Coworking hosts supporting events right now</div>
+            </div>
+            <div class="stat-card instagram-card">
+              <div class="stat-value">3</div>
+              <div class="small text-secondary">Platforms to check out upcoming meetups and RSVP</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="upcoming-events" class="section" aria-labelledby="upcoming-events-heading">
+      <div class="container">
         <div class="row align-items-end g-4 mb-4">
-          <div class="col-lg-8">
-            <div class="kicker mb-2">Community partners</div>
-            <h2 class="fw-bold mb-3" id="supporters-heading">Trusted by</h2>
-            <p class="text-secondary mb-0" style="max-width:600px">
-              Our meetups are made possible thanks to these amazing coworking spaces in the Riviera Maya.
+          <div class="col-lg-8 fade-up visible">
+            <div class="kicker mb-2">Upcoming events</div>
+            <h2 class="fw-bold mb-3" id="upcoming-events-heading">Upcoming meetups</h2>
+            <p class="text-secondary mb-0 section-note">
+              Join the next builder meetup in Riviera Maya. Each event is designed to create real value: practical learning, better conversations, and stronger local connections among people building technology products.
             </p>
           </div>
         </div>
 
-        <div class="row g-3 align-items-start">
-          <div class="col-md-5 fade-up delay-1">
-            <a
-              class="glass p-4 h-100 support-card"
-              href="https://nestcoworking.com.mx/"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Visit Nest Coworking website"
-            >
-              <div class="support-logo-wrap">
-                <img class="support-logo" src="assets/nest.jpg" alt="Nest Coworking logo" width="180" height="56" loading="lazy" />
+        <div class="row g-4">
+          <div class="col-lg-6 fade-up visible" id="event-product-hunt">
+            <div class="glass p-4 p-md-5 meetup-card d-flex flex-column h-100 event-detail-card">
+              <div class="d-flex align-items-center justify-content-between gap-3 mb-3">
+                <span class="meetup-badge upcoming">Next meetup</span>
+                <span class="date-chip"><span aria-hidden="true">📅</span> <time datetime="2026-03-18">Mar 18</time></span>
               </div>
-              <div class="fw-bold mb-1">Nest Coworking</div>
-              <div class="text-secondary small">Host of our Playa del Carmen meetups.</div>
-            </a>
+              <h3 class="h3 fw-bold mb-2">Product Hunt Launch Workshop</h3>
+              <div class="event-detail-list">
+                <div><strong>When:</strong> March 18 · 6:00 PM – 8:00 PM</div>
+                <div><strong>Where:</strong> Nest Coworking · Playa del Carmen</div>
+                <div><strong>Format:</strong> Practical workshop for founders and builders launching real products</div>
+              </div>
+              <p class="text-secondary mt-4 mb-3">
+                This practical workshop is for founders, indie hackers, and startup builders who want to understand how Product Hunt really works. We will cover what the platform is, why it matters, how launches are prepared, and what helps products gain visibility, early users, and feedback.
+              </p>
+              <p class="text-secondary mb-0">
+                If you are building a SaaS, AI tool, startup, or indie product, this session will give you a clearer picture of how to approach a Product Hunt launch without hype or guesswork.
+              </p>
+              <div class="event-link-row mt-auto">
+                <a class="btn cta" href="https://www.meetup.com/riviera-maya-tech-builders/events/313558507/" target="_blank" rel="noopener noreferrer">RSVP on Meetup</a>
+                <a class="btn flyer-btn" href="https://www.eventbrite.com.mx/e/riviera-maya-tech-builders-2-product-hunt-launch-workshop-tickets-1984783821840" target="_blank" rel="noopener noreferrer">Eventbrite</a>
+                <a class="btn flyer-btn" href="assets/flyer-pdc.png" download>Download flyer</a>
+              </div>
+            </div>
           </div>
 
-          <div class="col-md-5 fade-up delay-2">
-            <a
-              class="glass p-4 h-100 support-card"
-              href="https://digitaljungle.org/"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Visit Digital Jungle website"
-            >
-              <div class="support-logo-wrap">
-                <img class="support-logo" src="assets/digitaljungle.png" alt="Digital Jungle logo" width="180" height="56" loading="lazy" />
+          <div class="col-lg-6 fade-up delay-1 visible" id="event-tulum">
+            <div class="glass p-4 p-md-5 meetup-card d-flex flex-column h-100 event-detail-card">
+              <div class="d-flex align-items-center justify-content-between gap-3 mb-3">
+                <span class="meetup-badge">Tulum chapter</span>
+                <span class="date-chip"><span aria-hidden="true">📅</span> <time datetime="2026-04-25">Apr 25</time></span>
               </div>
-              <div class="fw-bold mb-1">Digital Jungle</div>
-              <div class="text-secondary small">Host of our Tulum meetups.</div>
-            </a>
-          </div>
-
-          <div class="col-md-2 fade-up delay-3 d-flex align-items-center">
-            <div class="small text-secondary">
-              Want to host or support?<br>
-              <a href="mailto:hello@rivieramaya.tech" class="fw-bold" style="color:var(--sea)">Email us →</a>
+              <h3 class="h3 fw-bold mb-2">Tulum Chapter Builders Meetup</h3>
+              <div class="event-detail-list">
+                <div><strong>When:</strong> April 25 · 10:00 AM – 12:30 PM</div>
+                <div><strong>Where:</strong> Digital Jungle · Tulum</div>
+                <div><strong>Format:</strong> Conversation-driven meetup for people building technology products</div>
+              </div>
+              <p class="text-secondary mt-4 mb-3">
+                A relaxed, conversation-driven meetup for people building technology products in and around Tulum. The focus is simple: meet other builders, talk about what you are working on, exchange ideas, and spark possible collaborations.
+              </p>
+              <p class="text-secondary mb-0">
+                Good fit for indie hackers, founders, engineers, and product-minded people who want higher-signal conversations than a typical networking event.
+              </p>
+              <div class="event-link-row mt-auto">
+                <a class="btn cta" href="https://www.meetup.com/riviera-maya-tech-builders/events/313715257/" target="_blank" rel="noopener noreferrer">RSVP on Meetup</a>
+                <a class="btn flyer-btn" href="https://www.eventbrite.com.mx/e/riviera-maya-tech-builders-tulum-chapter-tickets-1984847531397" target="_blank" rel="noopener noreferrer">Eventbrite</a>
+                <a class="btn flyer-btn" href="assets/flyer-tulum.png" download>Download flyer</a>
+              </div>
             </div>
           </div>
         </div>
-
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ════════════════ FOOTER ════════════════ -->
+    <div class="soft-divider"></div>
+
+    <section id="past-events" class="section" aria-labelledby="past-events-heading">
+      <div class="container">
+        <div class="row align-items-end g-4 mb-4">
+          <div class="col-lg-8 fade-up visible">
+            <div class="kicker mb-2">Past meetups</div>
+            <h2 class="fw-bold mb-3" id="past-events-heading">Past meetups and recaps</h2>
+            <p class="text-secondary mb-0 section-note">
+              Checkout past events of the community. If it gives you FOMO, do not worry. More events coming...
+            </p>
+          </div>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-lg-6 fade-up visible">
+            <article class="glass p-4 p-md-5 h-100">
+              <div class="archive-year mb-2">February 19th 2026</div>
+              <img src="assets/events/february19.jpg" alt="Riviera Maya Tech Builders meetup group during a past event" class="archive-photo" width="1600" height="1000" loading="lazy" />
+              <h3 class="h4 fw-bold mb-2">Riviera Maya Tech Builders #1</h3>
+              <div class="text-secondary small mb-3">Playa del Carmen · Sold-out kickoff meetup</div>
+              <p class="text-secondary mb-3">
+                The first Riviera Maya Tech Builders meetup brought together indie hackers, founders, and startup builders in Playa del Carmen for an informal, builder-focused session. The conversation centered on what people are building, local connections worth strengthening.
+              </p>
+              <ul class="text-secondary mb-0 ps-3">
+                <li>Founders and indie hackers met peers building real products locally.</li>
+                <li>Attendees exchanged ideas, feedback, and collaboration opportunities.</li>
+                <li>The meetup validated there is real demand for a focused builder community in Riviera Maya.</li>
+              </ul>
+            </article>
+          </div>
+
+          <div class="col-lg-6 fade-up delay-1 visible">
+            <article class="glass p-4 p-md-5 h-100">
+              <div class="archive-year mb-2">What people come for</div>
+              <h3 class="h4 fw-bold mb-3">Why these events matter</h3>
+              <div class="row g-3">
+                <div class="col-sm-6">
+                  <div class="glass-sand p-3 h-100">
+                    <div class="fw-bold small mb-1">Builders</div>
+                    <div class="small text-secondary">Meet other builders working on real tech products.</div>
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="glass-sand p-3 h-100">
+                    <div class="fw-bold small mb-1">Feedback</div>
+                    <div class="small text-secondary">Exchange ideas, experience, and practical feedback.</div>
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="glass-sand p-3 h-100">
+                    <div class="fw-bold small mb-1">Connections</div>
+                    <div class="small text-secondary">Discover collaborations and local synergies.</div>
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="glass-sand p-3 h-100">
+                    <div class="fw-bold small mb-1">Community</div>
+                    <div class="small text-secondary">Be part of a visible tech builder community in Riviera Maya.</div>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section pt-0" aria-labelledby="social-proof-heading">
+      <div class="container">
+        <div class="glass p-4 p-md-5 fade-up visible">
+          <div class="row g-4 align-items-center">
+            <div class="col-lg-8">
+              <div class="kicker mb-2">Social proof</div>
+              <h2 class="fw-bold mb-3" id="social-proof-heading">Follow the community</h2>
+              <p class="text-secondary mb-0 section-note">
+                You can now follow the community on Instagram, Meetup, Eventbrite and Luma so you don't miss an event.
+              </p>
+            </div>
+            <div class="col-lg-4 text-lg-end">
+              <a class="btn cta" href="https://www.instagram.com/rivieramayatech" target="_blank" rel="noopener noreferrer">Follow on Instagram</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
   <footer role="contentinfo">
     <div class="container">
       <div class="d-flex flex-column flex-md-row justify-content-between align-items-start gap-3">
@@ -926,15 +848,15 @@
         </div>
 
         <nav class="small" aria-label="Footer navigation">
-          <a href="#meetups">Meetups</a>
+          <a href="index.html#meetups">Meetups</a>
           <span class="mx-2" aria-hidden="true">·</span>
           <a href="events.html">Events</a>
           <span class="mx-2" aria-hidden="true">·</span>
-          <a href="#why">Why</a>
+          <a href="index.html#why">Why</a>
           <span class="mx-2" aria-hidden="true">·</span>
-          <a href="#about">About</a>
+          <a href="index.html#about">About</a>
           <span class="mx-2" aria-hidden="true">·</span>
-          <a href="#supporters">Supporters</a>
+          <a href="index.html#supporters">Supporters</a>
           <span class="mx-2" aria-hidden="true">·</span>
           <a href="mailto:hello@rivieramaya.tech">Email</a>
         </nav>
@@ -971,7 +893,7 @@
       <div class="soft-divider my-3"></div>
 
       <div class="small text-muted">
-        © <span id="year"></span> Riviera Maya Tech Builders. Built with good vibes. 🤙
+        © <span id="year"></span> Riviera Maya Tech Builders. Built for people who actually build. 🤙
       </div>
     </div>
   </footer>
