@@ -580,6 +580,35 @@
     @media (max-width: 991px) { .stats-grid { grid-template-columns: repeat(2, minmax(0,1fr)); } }
     @media (max-width: 575px) { .stats-grid { grid-template-columns: 1fr; } }
 
+  /* ── FAQ section ──────────────────────── */
+    .faq-accordion .accordion-item {
+    background: transparent;
+    border: 0;
+    border-bottom: 1px solid rgba(15,23,42,.08);
+  }
+
+  .faq-accordion .accordion-button {
+    background: transparent;
+    box-shadow: none;
+    padding: 1rem 0;
+    font-weight: 700;
+    color: var(--ink);
+  }
+
+  .faq-accordion .accordion-button:not(.collapsed) {
+    background: transparent;
+    color: var(--ink);
+  }
+
+  .faq-accordion .accordion-button:focus {
+    box-shadow: none;
+  }
+
+  .faq-accordion .accordion-body {
+    padding: 0 0 1rem 0;
+    line-height: 1.7;
+  }
+
   </style>
 </head>
 
@@ -817,12 +846,97 @@
       </div>
     </section>
 
+  <section class="section pt-0" aria-labelledby="faq-heading">
+    <div class="container">
+      <div class="glass p-4 p-md-5 fade-up visible">
+        <div class="row g-4 align-items-start">
+          <div class="col-lg-5">
+            <div class="kicker mb-2">FAQ</div>
+            <h2 class="fw-bold mb-3" id="faq-heading">Questions people usually have</h2>
+            <p class="text-secondary mb-0 section-note">
+              A few quick answers before you RSVP or join a meetup.
+            </p>
+          </div>
+
+          <div class="col-lg-7">
+            <div class="accordion accordion-flush faq-accordion" id="eventsFaq">
+              <div class="accordion-item">
+                <h3 class="accordion-header" id="faq-one-heading">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq-one" aria-expanded="true" aria-controls="faq-one">
+                    Is it free to attend?
+                  </button>
+                </h3>
+                <div id="faq-one" class="accordion-collapse collapse show" aria-labelledby="faq-one-heading" data-bs-parent="#eventsFaq">
+                  <div class="accordion-body text-secondary">
+                    Yes. For now, the meetups are free to attend, but RSVP is required so we can manage capacity and keep the experience smooth for everyone.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h3 class="accordion-header" id="faq-two-heading">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-two" aria-expanded="false" aria-controls="faq-two">
+                    What language are the events in?
+                  </button>
+                </h3>
+                <div id="faq-two" class="accordion-collapse collapse" aria-labelledby="faq-two-heading" data-bs-parent="#eventsFaq">
+                  <div class="accordion-body text-secondary">
+                    Usually a mix of English and Spanish, depending on who is in the room. The goal is to keep it natural, welcoming, and easy to participate in.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h3 class="accordion-header" id="faq-three-heading">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-three" aria-expanded="false" aria-controls="faq-three">
+                    Do I need to be technical to join?
+                  </button>
+                </h3>
+                <div id="faq-three" class="accordion-collapse collapse" aria-labelledby="faq-three-heading" data-bs-parent="#eventsFaq">
+                  <div class="accordion-body text-secondary">
+                    No. The community is for people building tech products, so that includes developers, technical founders, product-minded operators, and non-technical founders actively building.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h3 class="accordion-header" id="faq-four-heading">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-four" aria-expanded="false" aria-controls="faq-four">
+                    How often do you host events?
+                  </button>
+                </h3>
+                <div id="faq-four" class="accordion-collapse collapse" aria-labelledby="faq-four-heading" data-bs-parent="#eventsFaq">
+                  <div class="accordion-body text-secondary">
+                    The goal is to host events monthly, with activity growing across Riviera Maya over time as the community expands.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h3 class="accordion-header" id="faq-five-heading">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-five" aria-expanded="false" aria-controls="faq-five">
+                    Can I present something I’m building?
+                  </button>
+                </h3>
+                <div id="faq-five" class="accordion-collapse collapse" aria-labelledby="faq-five-heading" data-bs-parent="#eventsFaq">
+                  <div class="accordion-body text-secondary">
+                    Yes, likely yes. Some sessions will be more presentation-friendly than others, but sharing what you are building, asking for feedback, or proposing a topic is very welcome.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
     <section class="section pt-0" aria-labelledby="social-proof-heading">
       <div class="container">
         <div class="glass p-4 p-md-5 fade-up visible">
           <div class="row g-4 align-items-center">
             <div class="col-lg-8">
-              <div class="kicker mb-2">Social proof</div>
+              <div class="kicker mb-2">Connect</div>
               <h2 class="fw-bold mb-3" id="social-proof-heading">Follow the community</h2>
               <p class="text-secondary mb-0 section-note">
                 You can now follow the community on Instagram, Meetup, Eventbrite and Luma so you don't miss an event.
