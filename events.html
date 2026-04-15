@@ -159,18 +159,29 @@
   }
 
   .stat-card {
-    padding: 1.1rem 1rem;
+    padding: 1.4rem 1.2rem;
     border-radius: 22px;
-    background: rgba(255,255,255,.78);
-    border: 1px solid rgba(15,23,42,.06);
+    background: rgba(255,255,255,.82);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    border: 1px solid rgba(255,255,255,.65);
     box-shadow: var(--shadow);
+    transition: transform .18s ease, box-shadow .18s ease;
+  }
+  .stat-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 24px 60px rgba(2,6,23,.14);
   }
 
   .stat-value {
-    font-size: 1.4rem;
+    font-size: 1.9rem;
     font-weight: 800;
     line-height: 1;
     margin-bottom: .35rem;
+    background: linear-gradient(135deg, var(--sea) 0%, var(--sea-2) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
   }
 
   .event-detail-card { position: relative; }
@@ -233,6 +244,12 @@
     background: linear-gradient(135deg, rgba(18,194,179,.14), rgba(11,119,138,.10));
   }
 
+  /* Past event photos: compact fixed height (not the wide 16/10 ratio used on homepage) */
+  #past-events .community-photo {
+    aspect-ratio: unset;
+    height: 220px;
+  }
+
   @media (max-width: 991px) {
     .stats-grid { grid-template-columns: repeat(2, minmax(0,1fr)); }
   }
@@ -277,23 +294,24 @@
   <!-- ════════════════ NAV ════════════════ -->
   <nav class="navbar" id="mainNav" role="navigation" aria-label="Main navigation">
     <div class="container">
-      <a class="navbar-brand fw-bold" href="index.html">
-        <span class="brand-dot"></span>
-        Riviera Maya Tech Builders
+      <a class="navbar-brand fw-bold" href="index.html" aria-label="Riviera Maya Tech Builders – home">
+        <span class="brand-dot" aria-hidden="true"></span>
+        <span class="brand-name">Riviera Maya Tech Builders</span>
+        <span class="brand-name-short">RM Tech Builders</span>
       </a>
-      <div class="d-flex gap-2 nav-actions">
+      <div class="nav-actions">
         <a class="btn ghost btn-sm" href="index.html#meetups">Meetups</a>
         <a class="btn ghost btn-sm" href="events.html" aria-current="page">Events</a>
         <a class="btn ghost btn-sm" href="index.html#about">About</a>
         <button
-          class="btn btn-primary cta"
+          class="btn cta btn-sm"
           data-tally-open="J9OvqK"
           data-tally-layout="modal"
           data-tally-width="374"
           data-tally-emoji-text="👋"
           data-tally-emoji-animation="heart-beat"
           data-tally-auto-close="3000"
-          aria-label="Open form to join the community"
+          aria-label="Join the community"
         >
           Join
         </button>
@@ -400,6 +418,9 @@
               <p class="text-secondary mb-0">
                 Good fit for indie hackers, founders, engineers, and product-minded people who want higher-signal conversations than a typical networking event.
               </p>
+              <div class="mb-3">
+                <span class="capacity-note">⚡ Limited spots — RSVP required</span>
+              </div>
               <div class="event-link-row mt-auto">
                 <a class="btn cta" href="https://www.meetup.com/riviera-maya-tech-builders/events/313715257/" target="_blank" rel="noopener noreferrer">RSVP on Meetup</a>
                 <a class="btn flyer-btn" href="https://www.eventbrite.com.mx/e/riviera-maya-tech-builders-tulum-chapter-tickets-1984847531397" target="_blank" rel="noopener noreferrer">Eventbrite</a>
@@ -412,7 +433,7 @@
             <div class="glass p-4 p-md-5 meetup-card d-flex flex-column h-100 event-detail-card">
               <div class="d-flex align-items-center justify-content-between gap-3 mb-3">
                 <span class="meetup-badge">PDC chapter</span>
-                <span class="date-chip"><span aria-hidden="true">📅</span> <time datetime="2026-03-18">Apr 29</time></span>
+                <span class="date-chip"><span aria-hidden="true">📅</span> <time datetime="2026-04-29">Apr 29</time></span>
               </div>
               <h3 class="h3 fw-bold mb-2">Built in Paradise</h3>
               <div class="event-detail-list">
@@ -427,6 +448,9 @@ It will be a builder feedback night. Basically, a focused, collaborative format 
               <p class="text-secondary mb-0">
                 Two builders will present their projects built in paradise (aka Riviera Maya), followed by open discussion and feedback from the group.
               </p>
+              <div class="mb-3">
+                <span class="capacity-note">⚡ Limited spots — RSVP required</span>
+              </div>
               <div class="event-link-row mt-auto">
                 <a class="btn cta" href="https://www.meetup.com/riviera-maya-tech-builders/events/31393779" target="_blank" rel="noopener noreferrer">RSVP on Meetup</a>
                 <a class="btn flyer-btn" href="https://www.eventbrite.com.mx/e/riviera-maya-tech-builders-2-product-hunt-launch-workshop-tickets-1984783821840" target="_blank" rel="noopener noreferrer">Eventbrite</a>
@@ -456,7 +480,13 @@ It will be a builder feedback night. Basically, a focused, collaborative format 
           <div class="col-lg-6 fade-up visible">
             <article class="glass p-4 p-md-5 h-100">
               <div class="archive-year mb-2">February 19th 2026</div>
-              <img src="assets/events/february19.jpg" alt="Riviera Maya Tech Builders meetup group during a past event" class="archive-photo" width="1600" height="1000" loading="lazy" />
+              <div class="photo-card mb-4">
+                <img src="assets/events/february19.jpg" alt="Riviera Maya Tech Builders first meetup in Playa del Carmen" class="community-photo" width="1600" height="1000" loading="lazy" />
+                <div class="photo-overlay">
+                  <div class="photo-caption-text">Meetup #1 · Feb 2026 · Playa del Carmen</div>
+                  <span class="photo-badge sold-out-badge">Sold out ✓</span>
+                </div>
+              </div>
               <h3 class="h4 fw-bold mb-2">Riviera Maya Tech Builders #1</h3>
               <div class="text-secondary small mb-3">Playa del Carmen · Sold-out kickoff meetup</div>
               <p class="text-secondary mb-3">
@@ -472,7 +502,13 @@ It will be a builder feedback night. Basically, a focused, collaborative format 
           <div class="col-lg-6 fade-up visible">
             <article class="glass p-4 p-md-5 h-100">
               <div class="archive-year mb-2">March 18th 2026</div>
-              <img src="assets/events/march18.jpg" alt="Riviera Maya Tech Builders meetup group during a past event" class="archive-photo" width="1600" height="1000" loading="lazy" />
+              <div class="photo-card mb-4">
+                <img src="assets/events/march18.jpg" alt="Product Hunt workshop at Riviera Maya Tech Builders, March 2026" class="community-photo" width="1600" height="1000" loading="lazy" />
+                <div class="photo-overlay">
+                  <div class="photo-caption-text">Meetup #2 · Mar 2026 · Product Hunt Workshop</div>
+                  <span class="photo-badge sold-out-badge">100% tech</span>
+                </div>
+              </div>
               <h3 class="h4 fw-bold mb-2">Product Hunt workshop</h3>
               <div class="text-secondary small mb-3">Playa del Carmen · Product Hunt workshop</div>
               <p class="text-secondary mb-3">

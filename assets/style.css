@@ -134,19 +134,21 @@ h1, h2, h3, h4 {
     padding-bottom: .45rem;
   }
   .navbar .container {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: .35rem;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: .5rem;
   }
   .navbar-brand {
-    font-size: .93rem;
+    font-size: .88rem;
   }
-  .nav-actions {
-    gap: .35rem;
+  /* Hide ghost nav links on small screens — keep only the CTA */
+  .nav-actions .ghost {
+    display: none;
   }
-  .nav-actions .btn {
-    font-size: .82rem;
-    padding: .38rem .78rem;
+  .nav-actions .cta {
+    font-size: .84rem;
+    padding: .46rem 1rem;
   }
 }
 
@@ -425,6 +427,133 @@ footer a:hover { color: var(--sea); }
   transition: color .15s;
 }
 .social-link:hover { color: var(--sea); }
+
+/* ── Social Proof Strip ─────────────────────────────── */
+.proof-strip {
+  padding: 0 0 2.5rem;
+}
+.proof-strip-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 1.6rem 2.5rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.proof-item {
+  text-align: center;
+  flex: 1;
+  min-width: 120px;
+}
+.proof-num {
+  font-size: 1.9rem;
+  font-weight: 800;
+  line-height: 1;
+  background: linear-gradient(135deg, var(--sea) 0%, var(--sea-2) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: .3rem;
+}
+.proof-label {
+  font-size: .76rem;
+  font-weight: 600;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: .05em;
+}
+.proof-divider {
+  width: 1px;
+  height: 36px;
+  background: rgba(15,23,42,.10);
+  flex-shrink: 0;
+}
+@media (max-width: 767px) {
+  .proof-strip-inner { gap: 1.25rem; padding: 1.25rem 1.5rem; }
+  .proof-divider { display: none; }
+  .proof-item { min-width: calc(50% - 1.5rem); }
+}
+@media (max-width: 575px) {
+  .proof-num { font-size: 1.55rem; }
+}
+
+/* ── Community Photos ────────────────────────────────── */
+.community-action { padding-bottom: 0; }
+
+/* Homepage community photos: compact fixed height */
+.community-action .community-photo {
+  aspect-ratio: unset;
+  height: 220px;
+}
+
+.photo-card {
+  position: relative;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+.community-photo {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  display: block;
+  transition: transform .4s ease;
+}
+.photo-card:hover .community-photo {
+  transform: scale(1.03);
+}
+.photo-overlay {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  background: linear-gradient(to top, rgba(2,6,23,.72) 0%, transparent 100%);
+  padding: 1.5rem 1.2rem .9rem;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: .5rem;
+}
+.photo-caption-text {
+  color: rgba(255,255,255,.90);
+  font-size: .83rem;
+  font-weight: 600;
+}
+.photo-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: .28rem .72rem;
+  border-radius: 999px;
+  font-size: .75rem;
+  font-weight: 700;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.sold-out-badge {
+  background: rgba(18,194,179,.25);
+  border: 1px solid rgba(18,194,179,.55);
+  color: #7af5ec;
+}
+
+/* ── Capacity note on event cards ────────────────────── */
+.capacity-note {
+  display: inline-flex;
+  align-items: center;
+  gap: .3rem;
+  font-size: .79rem;
+  color: #92400e;
+  font-weight: 600;
+  background: rgba(251,191,36,.13);
+  border: 1px solid rgba(251,191,36,.30);
+  border-radius: 999px;
+  padding: .22rem .68rem;
+}
+
+/* ── SVG icons in Why section ────────────────────────── */
+.icon svg {
+  width: 20px;
+  height: 20px;
+  stroke: var(--sea);
+  flex-shrink: 0;
+}
 
 /* ── Fade-up ──────────────────────────────────────────── */
 .fade-up {
