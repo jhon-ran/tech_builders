@@ -37,98 +37,124 @@
 
   <!-- ── JSON-LD: Organization + Events ──────────────────── -->
   <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "WebSite",
-      "@id": "https://rivieramaya.tech/#website",
-      "url": "https://rivieramaya.tech/",
-      "name": "Riviera Maya Tech Builders",
-      "description": "A community for indie hackers, founders, and startup builders in Playa del Carmen, Tulum, and Cancun.",
-      "publisher": { "@id": "https://rivieramaya.tech/#organization" },
-      "inLanguage": "en",
-      "potentialAction": {
-        "@type": "SearchAction",
-        "target": "https://rivieramaya.tech/?s={search_term_string}",
-        "query-input": "required name=search_term_string"
-      }
-    },
-    {
-      "@type": "Organization",
-      "@id": "https://rivieramaya.tech/#organization",
-      "name": "Riviera Maya Tech Builders",
-      "url": "https://rivieramaya.tech/",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://rivieramaya.tech/assets/og-image.png",
-        "width": 1200,
-        "height": 630
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://rivieramaya.tech/#website",
+        "url": "https://rivieramaya.tech/",
+        "name": "Riviera Maya Tech Builders",
+        "description": "A community for indie hackers, founders, developers and startup builders in Playa del Carmen, Tulum, Puerto Morelos and Cancún.",
+        "publisher": {
+          "@id": "https://rivieramaya.tech/#organization"
+        },
+        "inLanguage": "en",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://rivieramaya.tech/?s={search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
       },
-      "sameAs": [
-        "https://www.instagram.com/rivieramayatech",
-        "https://www.meetup.com/riviera-maya-tech-builders/",
-        "https://www.eventbrite.com.mx/o/120842868943",
-        "https://lu.ma/rivieramayatech"
-      ],
-      "contactPoint": {
-        "@type": "ContactPoint",
+      {
+        "@type": "Organization",
+        "@id": "https://rivieramaya.tech/#organization",
+        "name": "Riviera Maya Tech Builders",
+        "url": "https://rivieramaya.tech/",
+        "description": "A community for indie hackers, founders, developers and startup builders in Playa del Carmen, Tulum, Puerto Morelos and Cancún.",
         "email": "hello@rivieramaya.tech",
-        "contactType": "community"
-      }
-    },
-    {
-      "@type": "Event",
-      "@id": "https://rivieramaya.tech/#event-tulum-2026-04-25",
-      "name": "Riviera Maya Tech Builders – Tulum Chapter Builders Meetup",
-      "description": "A relaxed, conversation-driven meetup for people building technology products in and around Tulum. Builders meet to share what they are working on, exchange ideas, and spark collaborations.",
-      "startDate": "2026-04-25T10:00:00-05:00",
-      "endDate": "2026-04-25T12:30:00-05:00",
-      "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
-      "eventStatus": "https://schema.org/EventScheduled",
-      "image": [
-        "https://rivieramaya.tech/assets/og-image.png"
-      ],
-      "url": "https://www.meetup.com/riviera-maya-tech-builders/events/313715257/",
-      "organizer": { "@id": "https://rivieramaya.tech/#organization" },
-      "location": {
-        "@type": "Place",
-        "name": "Digital Jungle",
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": "Tulum",
-          "addressRegion": "Quintana Roo",
-          "addressCountry": "MX"
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://rivieramaya.tech/assets/og-image.png",
+          "width": 1200,
+          "height": 630
+        },
+        "sameAs": [
+          "https://www.instagram.com/rivieramayatech",
+          "https://www.meetup.com/riviera-maya-tech-builders/",
+          "https://www.eventbrite.com.mx/o/120842868943",
+          "https://luma.com/rivieramayatech"
+        ],
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "email": "hello@rivieramaya.tech",
+          "contactType": "community"
+        },
+        "areaServed": [
+          {
+            "@type": "City",
+            "name": "Playa del Carmen",
+            "containedInPlace": {
+              "@type": "State",
+              "name": "Quintana Roo"
+            }
+          },
+          {
+            "@type": "City",
+            "name": "Tulum",
+            "containedInPlace": {
+              "@type": "State",
+              "name": "Quintana Roo"
+            }
+          },
+          {
+            "@type": "City",
+            "name": "Cancún",
+            "containedInPlace": {
+              "@type": "State",
+              "name": "Quintana Roo"
+            }
+          },
+          {
+            "@type": "City",
+            "name": "Puerto Morelos",
+            "containedInPlace": {
+              "@type": "State",
+              "name": "Quintana Roo"
+            }
+          }
+        ]
+      },
+      {
+        "@type": "Event",
+        "@id": "https://rivieramaya.tech/events#event-puerto-morelos-2026-10-29",
+        "name": "Beach Coworking — Riviera Maya Tech Builders (Puerto Morelos)",
+        "description": "The first Riviera Maya Tech Builders meetup in Puerto Morelos: a relaxed beach coworking session. Bring your laptop, work on whatever you're building, and meet fellow developers, indie hackers, founders and tech enthusiasts by the Caribbean. No presentations, no pitches, no formal agenda. Free admission, RSVP required.",
+        "startDate": "2026-10-29T11:00:00-05:00",
+        "endDate": "2026-10-29T16:00:00-05:00",
+        "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+        "eventStatus": "https://schema.org/EventScheduled",
+        "isAccessibleForFree": true,
+        "image": [
+          "https://rivieramaya.tech/assets/og-image.png"
+        ],
+        "url": "https://www.meetup.com/riviera-maya-tech-builders/events/317094755",
+        "organizer": {
+          "@id": "https://rivieramaya.tech/#organization"
+        },
+        "location": {
+          "@type": "Place",
+          "name": "Día y Noche Beach Club",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Av. Javier Rojo Gómez y Rafael E. Melgar",
+            "addressLocality": "Puerto Morelos",
+            "postalCode": "77580",
+            "addressRegion": "Quintana Roo",
+            "addressCountry": "MX"
+          }
+        },
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "MXN",
+          "availability": "https://schema.org/InStock",
+          "validFrom": "2026-10-22T00:00:00-05:00",
+          "url": "https://www.eventbrite.com.mx/e/beach-coworking-riviera-maya-tech-builders-tickets-2003791291694"
         }
       }
-    },
-    {
-      "@type": "Event",
-      "@id": "https://rivieramaya.tech/#event-pdc-2026-04-29",
-      "name": "Riviera Maya Tech Builders – Built in Paradise",
-      "description": "A builder feedback session in Playa del Carmen where two local builders present their projects, receive thoughtful feedback, and spark open discussion around products being built in Riviera Maya.",
-      "startDate": "2026-04-29T18:00:00-05:00",
-      "endDate": "2026-04-29T20:00:00-05:00",
-      "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
-      "eventStatus": "https://schema.org/EventScheduled",
-      "image": [
-        "https://rivieramaya.tech/assets/og-image.png"
-      ],
-      "url": "https://www.meetup.com/riviera-maya-tech-builders/events/313937793/",
-      "organizer": { "@id": "https://rivieramaya.tech/#organization" },
-      "location": {
-        "@type": "Place",
-        "name": "Nest Coworking",
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": "Playa del Carmen",
-          "addressRegion": "Quintana Roo",
-          "addressCountry": "MX"
-        }
-      }
-    }
-  ]
-}
+    ]
+  }
 </script>
 
   <!-- ── Tally embed ──────────────────────────────────────── -->
