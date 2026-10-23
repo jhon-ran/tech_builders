@@ -6,7 +6,7 @@
 
   <!-- ── SEO: Primary ─────────────────────────────────────── -->
   <title>Riviera Maya Tech Builders | Community for Founders & Indie Hackers</title>
-  <meta name="description" content="Monthly meetups for indie hackers, SaaS founders & startup builders in Playa del Carmen, Tulum, and Cancun. No sales-y vibes — just real builders shipping real products." />
+  <meta name="description" content="Monthly meetups for indie hackers, SaaS founders & startup builders in Playa del Carmen, Tulum, Puerto Morelos and Cancún. No sales-y vibes — just real builders shipping." />
   <meta name="author" content="Riviera Maya Tech Builders" />
   <link rel="canonical" href="https://rivieramaya.tech/" />
   <meta name="robots" content="index, follow" />
@@ -16,8 +16,9 @@
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://rivieramaya.tech/" />
   <meta property="og:title" content="Riviera Maya Tech Builders | Community for Founders & Indie Hackers" />
-  <meta property="og:description" content="Monthly meetups for indie hackers, SaaS founders & startup builders in Playa del Carmen, Tulum, and Cancun. Join the community." />
-  <meta property="og:image" content="https://rivieramaya.tech/assets/og-image.png" />
+  <meta property="og:description" content="Monthly meetups for indie hackers, SaaS founders & startup builders in Playa del Carmen, Tulum, Puerto Morelos and Cancún. Join the community." />
+  <meta property="og:image" content="https://rivieramaya.tech/assets/og-image.jpg" />
+  <meta property="og:image:alt" content="Tech builders working together in a tropical coworking space in Riviera Maya" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta property="og:site_name" content="Riviera Maya Tech Builders" />
@@ -28,12 +29,13 @@
   <meta name="twitter:url" content="https://rivieramaya.tech/" />
   <meta name="twitter:title" content="Riviera Maya Tech Builders | Founders & Indie Hackers" />
   <meta name="twitter:description" content="Monthly meetups for indie hackers, SaaS founders & startup builders in Riviera Maya. Join the community." />
-  <meta name="twitter:image" content="https://rivieramaya.tech/assets/og-image.png" />
+  <meta name="twitter:image" content="https://rivieramaya.tech/assets/og-image.jpg" />
   <meta name="twitter:site" content="@rivieramayatech" />
 
   <!-- ── Favicon ──────────────────────────────────────────── -->
-  <link rel="icon" type="image/png" href="assets/favicon.png" />
-  <link rel="apple-touch-icon" href="assets/favicon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="192x192" href="/assets/icon-192.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png" />
 
   <!-- ── JSON-LD: Organization + Events ──────────────────── -->
   <script type="application/ld+json">
@@ -65,9 +67,9 @@
         "email": "hello@rivieramaya.tech",
         "logo": {
           "@type": "ImageObject",
-          "url": "https://rivieramaya.tech/assets/og-image.png",
-          "width": 1200,
-          "height": 630
+          "url": "https://rivieramaya.tech/assets/logo-512.png",
+          "width": 512,
+          "height": 512
         },
         "sameAs": [
           "https://www.instagram.com/rivieramayatech",
@@ -126,7 +128,7 @@
         "eventStatus": "https://schema.org/EventScheduled",
         "isAccessibleForFree": true,
         "image": [
-          "https://rivieramaya.tech/assets/og-image.png"
+          "https://rivieramaya.tech/assets/og-image.jpg"
         ],
         "url": "https://www.meetup.com/riviera-maya-tech-builders/events/317094755",
         "organizer": {
@@ -262,7 +264,9 @@
           <div class="glass p-2">
             <img
               class="hero-img"
-              src="assets/hero.jpg"
+              src="assets/hero-1214.webp"
+              srcset="assets/hero-640.webp 640w, assets/hero-1214.webp 1214w"
+              sizes="(min-width: 992px) 50vw, 100vw"
               alt="Tech builders collaborating in a tropical coworking space in Riviera Maya"
               width="640" height="480"
               loading="eager"
@@ -285,7 +289,7 @@
         </div>
         <div class="proof-divider" aria-hidden="true"></div>
         <div class="proof-item">
-          <div class="proof-num">3</div>
+          <div class="proof-num">4</div>
           <div class="proof-label">cities with active meetups</div>
         </div>
         <div class="proof-divider" aria-hidden="true"></div>
@@ -315,7 +319,7 @@
             See what's coming up, where it's happening, and reserve your spot.
             RSVP is required — spaces are limited.
           </p>
-          <a href="events.html" class="fw-bold" style="color:var(--sea)">See all event details and past meetups →</a>
+          <a href="/events" class="fw-bold" style="color:var(--sea)">See all event details and past meetups →</a>
         </div>
       </div>
 
@@ -353,7 +357,7 @@
               >
                 RSVP on Luma
               </a>
-              <a class="btn flyer-btn" href="events.html#puerto-morelos">
+              <a class="btn flyer-btn" href="/events#puerto-morelos">
                 View details
               </a>
             </div>
@@ -388,7 +392,7 @@
               >
                 RSVP on Luma
               </a>
-              <a class="btn flyer-btn" href="events.html#event-built-in-paradise">
+              <a class="btn flyer-btn" href="/events#event-built-in-paradise">
                 View details
               </a>
             </div>
@@ -415,8 +419,10 @@
       <div class="row g-3">
         <div class="col-md-6 fade-up delay-1">
           <div class="photo-card">
-            <img
-              src="assets/events/february19.jpg"
+            <img decoding="async"
+              src="assets/events/february19-800.webp"
+              srcset="assets/events/february19-800.webp 800w, assets/events/february19-1600.webp 1200w"
+              sizes="(min-width: 768px) 50vw, 100vw"
               alt="Riviera Maya Tech Builders first meetup in Playa del Carmen, February 2026"
               class="community-photo"
               loading="lazy"
@@ -430,8 +436,10 @@
         </div>
         <div class="col-md-6 fade-up delay-2">
           <div class="photo-card">
-            <img
-              src="assets/events/march18.jpg"
+            <img decoding="async"
+              src="assets/events/march18-800.webp"
+              srcset="assets/events/march18-800.webp 800w, assets/events/march18-1600.webp 1600w"
+              sizes="(min-width: 768px) 50vw, 100vw"
               alt="Product Hunt workshop at Riviera Maya Tech Builders, March 2026"
               class="community-photo"
               loading="lazy"
@@ -445,7 +453,7 @@
         </div>
       </div>
       <div class="text-center mt-4 fade-up">
-        <a href="events.html#past-events" class="btn ghost">See all past meetups →</a>
+        <a href="/events#past-events" class="btn ghost">See all past meetups →</a>
       </div>
     </div>
   </section>
@@ -701,13 +709,13 @@
             <span class="brand-dot" style="width:7px;height:7px" aria-hidden="true"></span>
             <span class="fw-bold">Riviera Maya Tech Builders</span>
           </div>
-          <div class="small">Playa del Carmen · Tulum · Cancun, México</div>
+          <div class="small">Playa del Carmen · Tulum · Puerto Morelos · Cancún, México</div>
         </div>
 
         <nav class="small" aria-label="Footer navigation">
           <a href="#meetups">Meetups</a>
           <span class="mx-2" aria-hidden="true">·</span>
-          <a href="events.html">Events</a>
+          <a href="/events">Events</a>
           <span class="mx-2" aria-hidden="true">·</span>
           <a href="#why">Why</a>
           <span class="mx-2" aria-hidden="true">·</span>
@@ -717,7 +725,7 @@
           <span class="mx-2" aria-hidden="true">·</span>
           <a href="mailto:hello@rivieramaya.tech">Email</a>
           <span class="mx-2" aria-hidden="true">·</span>
-          <a href="privacy.html">Privacy</a>
+          <a href="/privacy">Privacy</a>
         </nav>
       </div>
 
@@ -758,7 +766,6 @@
   </footer>
 
   <!-- ════════════════ SCRIPTS ════════════════ -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script>
     // Footer year
     document.getElementById("year").textContent = new Date().getFullYear();
