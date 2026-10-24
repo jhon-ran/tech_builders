@@ -1,0 +1,205 @@
+<!doctype html>
+<!--
+  Riviera Maya Tech Builders · email template
+  1. Copy this file to emails/YYYY-MM-DD-chapter-event.html
+  2. Replace every {{PLACEHOLDER}} (search for "{{").
+  3. Paste the HTML into your mailing tool and send yourself a test.
+  Delete a "Good to know" bullet or a whole block if you don't need it.
+-->
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="x-apple-disable-message-reformatting">
+<meta name="color-scheme" content="light">
+<meta name="supported-color-schemes" content="light">
+<meta name="robots" content="noindex">
+<title>{{EVENT_TITLE}} · {{CHAPTER}} | Riviera Maya Tech Builders</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&amp;display=swap" rel="stylesheet">
+<style>
+  body { margin:0; padding:0; -webkit-text-size-adjust:100%; }
+  a { color:#0a7d74; }
+  @media (max-width: 620px) {
+    .px { padding-left:20px !important; padding-right:20px !important; }
+    .h1 { font-size:30px !important; }
+    .stack { display:block !important; width:100% !important; }
+    .btn a { display:block !important; }
+    .sub { display:block !important; margin:8px 0 0 !important; }
+  }
+</style>
+</head>
+<body style="margin:0;padding:0;background-color:#f1f7f6;">
+
+<!-- Preheader (inbox preview text) -->
+<div style="display:none;font-size:1px;color:#f1f7f6;line-height:1px;max-height:0;max-width:0;opacity:0;overflow:hidden;">{{PREHEADER: one line shown in the inbox preview, ~90 characters}}</div>
+
+<table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" style="background-color:#f1f7f6;">
+<tr><td align="center" style="padding:24px 12px 32px;">
+
+<table role="presentation" cellpadding="0" cellspacing="0" border="0" width="600" style="width:100%;max-width:600px;background-color:#ffffff;border:1px solid #e3eaee;border-radius:20px;border-collapse:separate;overflow:hidden;font-family:Inter,'Helvetica Neue',Helvetica,Arial,sans-serif;color:#0f172a;">
+
+  <!-- Brand bar -->
+  <tr><td class="px" style="padding:20px 32px;border-bottom:1px solid #eef2f5;">
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"><tr>
+      <td style="font-size:15px;font-weight:700;color:#0f172a;">
+        <span style="display:inline-block;width:9px;height:9px;border-radius:9px;background-color:#12c2b3;vertical-align:middle;margin-right:8px;"></span><a href="https://rivieramaya.tech/" style="color:#0f172a;text-decoration:none;vertical-align:middle;">Riviera Maya Tech Builders</a>
+      </td>
+      <td align="right" style="font-size:13px;font-weight:600;"><a href="#es" style="color:#0a7d74;text-decoration:none;">En español ↓</a></td>
+    </tr></table>
+  </td></tr>
+
+  <!-- ===================== ENGLISH ===================== -->
+  <tr><td class="px" style="padding:32px 32px 8px;">
+    <span style="display:inline-block;padding:5px 11px;border-radius:999px;background-color:#0f172a;color:#ffffff;font-size:11px;font-weight:800;letter-spacing:1.2px;">NEXT MEETUP</span>
+    <span class="sub" style="display:inline-block;margin-left:8px;font-size:13px;font-weight:600;color:#5b4a2a;">{{CHAPTER}} chapter · {{SHORT_NOTE}}</span>
+    <h1 class="h1" style="margin:16px 0 0;font-size:36px;line-height:1.1;font-weight:800;letter-spacing:-0.8px;color:#0f172a;">{{EVENT_TITLE}}</h1>
+  </td></tr>
+
+  <tr><td class="px" style="padding:16px 32px 0;font-size:16px;line-height:1.65;color:#334155;">
+    <p style="margin:0 0 14px;">Hi everyone!</p>
+    <p style="margin:0 0 14px;">{{INTRO_PARAGRAPH: what is happening and why it's special. Use <strong style="color:#0f172a;">…</strong> for the key phrase.}}</p>
+    <p style="margin:0;">{{SECOND_PARAGRAPH: what to expect / who should come.}}</p>
+  </td></tr>
+
+  <!-- Event card -->
+  <tr><td class="px" style="padding:24px 32px 0;">
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:#fff6e5;border:1px solid #f6dcae;border-radius:16px;border-collapse:separate;">
+      <tr><td style="padding:18px;">
+        <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"><tr>
+          <td width="64" valign="top" style="width:64px;">
+            <table role="presentation" width="64" cellpadding="0" cellspacing="0" border="0" style="background-color:#ffffff;border:1px solid #ead2a4;border-radius:12px;border-collapse:separate;">
+              <tr><td align="center" style="padding:9px 0 2px;font-size:11px;font-weight:700;letter-spacing:1.2px;color:#7c5e2a;">{{MON}}</td></tr>
+              <tr><td align="center" style="padding:0 0 9px;font-size:26px;line-height:1;font-weight:800;color:#0f172a;">{{DD}}</td></tr>
+            </table>
+          </td>
+          <td valign="middle" style="padding-left:14px;">
+            <div style="font-size:18px;font-weight:800;color:#0f172a;">{{WEEKDAY}}, {{MONTH}} {{DD}}</div>
+            <div style="font-size:14px;color:#5b4a2a;margin-top:3px;">{{TIME_RANGE}} · {{TIME_NOTE}}</div>
+          </td>
+        </tr></table>
+
+        <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-top:14px;border-top:1px solid #f0d9ae;">
+          <tr>
+            <td width="70" valign="top" style="padding:12px 0 0;font-size:11px;font-weight:700;letter-spacing:1.2px;color:#7c5e2a;">WHERE</td>
+            <td valign="top" style="padding:11px 0 0;font-size:15px;line-height:1.5;color:#0f172a;"><strong>{{VENUE}}</strong>, {{CITY}}<br><a href="{{MAPS_URL}}" style="color:#0a7d74;font-size:14px;font-weight:600;">See location on Google Maps</a></td>
+          </tr>
+          <tr>
+            <td width="70" valign="top" style="padding:12px 0 0;font-size:11px;font-weight:700;letter-spacing:1.2px;color:#7c5e2a;">PRICE</td>
+            <td valign="top" style="padding:11px 0 0;font-size:15px;line-height:1.5;color:#0f172a;"><strong>Free</strong> · RSVP required</td>
+          </tr>
+        </table>
+
+        <!-- Button -->
+        <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-top:18px;"><tr>
+          <td class="btn" align="center" bgcolor="#0b7f76" style="border-radius:999px;background-color:#0b7f76;">
+            <a href="{{RSVP_URL}}" style="display:inline-block;padding:15px 28px;font-size:16px;font-weight:700;color:#ffffff;text-decoration:none;border-radius:999px;">RSVP to this meetup →</a>
+          </td>
+        </tr></table>
+        <p style="margin:10px 0 0;text-align:center;font-size:13px;color:#5b4a2a;">Please RSVP in advance so we can arrange seating with our hosts.</p>
+      </td></tr>
+    </table>
+  </td></tr>
+
+  <!-- Good to know -->
+  <tr><td class="px" style="padding:20px 32px 0;">
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:#f8fafc;border-radius:14px;border-collapse:separate;">
+      <tr><td style="padding:16px 18px;font-size:14px;line-height:1.6;color:#334155;">
+        <div style="font-size:11px;font-weight:700;letter-spacing:1.2px;color:#0a7d74;margin-bottom:6px;">GOOD TO KNOW</div>
+        • {{NOTE_1}}<br>
+        • {{NOTE_2}}<br>
+        • {{NOTE_3}}
+      </td></tr>
+    </table>
+  </td></tr>
+
+  <tr><td class="px" style="padding:22px 32px 32px;font-size:16px;line-height:1.6;color:#334155;">
+    {{SIGN_OFF}}<br><strong style="color:#0f172a;">Jo</strong>
+  </td></tr>
+
+  <!-- Divider -->
+  <tr><td class="px" style="padding:0 32px;"><table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="border-top:1px solid #e3eaee;font-size:0;line-height:0;">&nbsp;</td></tr></table></td></tr>
+
+  <!-- ===================== ESPAÑOL ===================== -->
+  <tr><td class="px" style="padding:32px 32px 8px;">
+    <a id="es" name="es"></a>
+    <div style="font-size:12px;font-weight:700;letter-spacing:1.4px;color:#0a7d74;margin-bottom:12px;">EN ESPAÑOL</div>
+    <span style="display:inline-block;padding:5px 11px;border-radius:999px;background-color:#0f172a;color:#ffffff;font-size:11px;font-weight:800;letter-spacing:1.2px;">PRÓXIMO MEETUP</span>
+    <span class="sub" style="display:inline-block;margin-left:8px;font-size:13px;font-weight:600;color:#5b4a2a;">Capítulo {{CHAPTER}}</span>
+    <h2 class="h1" style="margin:16px 0 0;font-size:32px;line-height:1.15;font-weight:800;letter-spacing:-0.6px;color:#0f172a;">{{EVENT_TITLE_ES}}</h2>
+  </td></tr>
+
+  <tr><td class="px" style="padding:16px 32px 0;font-size:16px;line-height:1.65;color:#334155;">
+    <p style="margin:0 0 14px;">¡Hola a todos!</p>
+    <p style="margin:0 0 14px;">{{PARRAFO_INTRO}}</p>
+    <p style="margin:0;">{{SEGUNDO_PARRAFO}}</p>
+  </td></tr>
+
+  <tr><td class="px" style="padding:24px 32px 0;">
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:#fff6e5;border:1px solid #f6dcae;border-radius:16px;border-collapse:separate;">
+      <tr><td style="padding:18px;">
+        <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"><tr>
+          <td width="64" valign="top" style="width:64px;">
+            <table role="presentation" width="64" cellpadding="0" cellspacing="0" border="0" style="background-color:#ffffff;border:1px solid #ead2a4;border-radius:12px;border-collapse:separate;">
+              <tr><td align="center" style="padding:9px 0 2px;font-size:11px;font-weight:700;letter-spacing:1.2px;color:#7c5e2a;">{{MON}}</td></tr>
+              <tr><td align="center" style="padding:0 0 9px;font-size:26px;line-height:1;font-weight:800;color:#0f172a;">{{DD}}</td></tr>
+            </table>
+          </td>
+          <td valign="middle" style="padding-left:14px;">
+            <div style="font-size:18px;font-weight:800;color:#0f172a;">{{DIA}} {{DD}} de {{MES}}</div>
+            <div style="font-size:14px;color:#5b4a2a;margin-top:3px;">{{HORARIO}} · {{NOTA_HORARIO}}</div>
+          </td>
+        </tr></table>
+
+        <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-top:14px;border-top:1px solid #f0d9ae;">
+          <tr>
+            <td width="70" valign="top" style="padding:12px 0 0;font-size:11px;font-weight:700;letter-spacing:1.2px;color:#7c5e2a;">DÓNDE</td>
+            <td valign="top" style="padding:11px 0 0;font-size:15px;line-height:1.5;color:#0f172a;"><strong>{{VENUE}}</strong>, {{CITY}}<br><a href="{{MAPS_URL}}" style="color:#0a7d74;font-size:14px;font-weight:600;">Ver ubicación en Google Maps</a></td>
+          </tr>
+          <tr>
+            <td width="70" valign="top" style="padding:12px 0 0;font-size:11px;font-weight:700;letter-spacing:1.2px;color:#7c5e2a;">COSTO</td>
+            <td valign="top" style="padding:11px 0 0;font-size:15px;line-height:1.5;color:#0f172a;"><strong>Gratis</strong> · confirmación obligatoria</td>
+          </tr>
+        </table>
+
+        <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-top:18px;"><tr>
+          <td class="btn" align="center" bgcolor="#0b7f76" style="border-radius:999px;background-color:#0b7f76;">
+            <a href="{{RSVP_URL}}" style="display:inline-block;padding:15px 28px;font-size:16px;font-weight:700;color:#ffffff;text-decoration:none;border-radius:999px;">Confirmar asistencia →</a>
+          </td>
+        </tr></table>
+        <p style="margin:10px 0 0;text-align:center;font-size:13px;color:#5b4a2a;">Confirma con anticipación para organizar los lugares con nuestros anfitriones.</p>
+      </td></tr>
+    </table>
+  </td></tr>
+
+  <tr><td class="px" style="padding:20px 32px 0;">
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:#f8fafc;border-radius:14px;border-collapse:separate;">
+      <tr><td style="padding:16px 18px;font-size:14px;line-height:1.6;color:#334155;">
+        <div style="font-size:11px;font-weight:700;letter-spacing:1.2px;color:#0a7d74;margin-bottom:6px;">BUENO SABER</div>
+        • {{NOTA_1}}<br>
+        • {{NOTA_2}}<br>
+        • {{NOTA_3}}
+      </td></tr>
+    </table>
+  </td></tr>
+
+  <tr><td class="px" style="padding:22px 32px 32px;font-size:16px;line-height:1.6;color:#334155;">
+    {{DESPEDIDA}}<br><strong style="color:#0f172a;">Jo</strong>
+  </td></tr>
+
+  <!-- Footer -->
+  <tr><td class="px" style="padding:22px 32px 26px;background-color:#f8fafc;border-top:1px solid #eef2f5;font-size:12px;line-height:1.7;color:#475569;text-align:center;">
+    <div style="font-size:13px;font-weight:700;color:#0f172a;margin-bottom:4px;">Riviera Maya Tech Builders</div>
+    Playa del Carmen · Tulum · Puerto Morelos · Cancún<br>
+    <a href="https://rivieramaya.tech/" style="color:#0a7d74;font-weight:600;">rivieramaya.tech</a> &nbsp;·&nbsp;
+    <a href="https://www.instagram.com/rivieramayatech" style="color:#0a7d74;font-weight:600;">Instagram</a> &nbsp;·&nbsp;
+    <a href="https://www.meetup.com/riviera-maya-tech-builders/" style="color:#0a7d74;font-weight:600;">Meetup</a> &nbsp;·&nbsp;
+    <a href="https://luma.com/rivieramayatech" style="color:#0a7d74;font-weight:600;">Luma</a>
+    <!-- Add your mailing-list unsubscribe link here, e.g. <br><a href="{{UNSUBSCRIBE_URL}}" style="color:#475569;">Unsubscribe</a> -->
+  </td></tr>
+
+</table>
+
+</td></tr>
+</table>
+</body>
+</html>
