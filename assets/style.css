@@ -951,3 +951,39 @@ footer a:hover { color: var(--sea); }
   .faq-item summary { padding: 1.1rem 1.15rem; font-size: .97rem; }
   .faq-item p { padding: 0 1.15rem 1.1rem; font-size: .92rem; }
 }
+
+/* ════════════════════════════════════════════════════
+   PROMO REEL in Community in action
+════════════════════════════════════════════════════ */
+.ca-grid.has-reel { grid-template-columns: 300px minmax(0, 1fr) minmax(0, 1fr); grid-template-rows: 258px 258px; }
+.ca-reel { grid-row: span 2; position: relative; border-radius: 24px; overflow: hidden; background: #0f172a; box-shadow: 0 20px 48px rgba(2,6,23,.18); }
+.reel-video { width: 100%; height: 100%; object-fit: cover; display: block; cursor: pointer; }
+.reel-btn {
+  position: absolute; bottom: 14px; width: 44px; height: 44px; border-radius: 999px;
+  border: 1px solid rgba(255,255,255,.35); background: rgba(15,23,42,.55); color: #fff;
+  display: flex; align-items: center; justify-content: center; cursor: pointer;
+  backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); transition: background .18s;
+}
+.reel-btn:hover { background: rgba(15,23,42,.75); color: #fff; }
+.reel-btn:focus-visible, .reel-play:focus-visible { outline: 3px solid #fff; outline-offset: 2px; }
+.reel-ig { left: 14px; }
+.reel-sound { right: 14px; }
+.reel-sound .icon-sound { display: none; }
+.reel-sound[aria-pressed="true"] .icon-sound { display: block; }
+.reel-sound[aria-pressed="true"] .icon-muted { display: none; }
+.reel-play {
+  position: absolute; left: 50%; bottom: 72px; transform: translateX(-50%);
+  width: 64px; height: 64px; border-radius: 999px; border: 0;
+  background: rgba(255,255,255,.94); color: var(--cta); box-shadow: 0 12px 30px rgba(2,6,23,.30);
+  display: flex; align-items: center; justify-content: center; cursor: pointer;
+}
+.reel-play[hidden] { display: none; }
+.reel-play svg { margin-left: 3px; }
+
+@media (max-width: 991.98px) {
+  .ca-grid.has-reel { grid-template-columns: 240px minmax(0, 1fr) minmax(0, 1fr); grid-template-rows: 205px 205px; }
+}
+@media (max-width: 767.98px) {
+  .ca-grid.has-reel { grid-template-columns: repeat(2, minmax(0, 1fr)); grid-template-rows: auto 200px 140px; }
+  .ca-reel { grid-column: span 2; grid-row: auto; justify-self: center; width: min(300px, 100%); aspect-ratio: 9 / 16; border-radius: 22px; margin-bottom: .375rem; }
+}
