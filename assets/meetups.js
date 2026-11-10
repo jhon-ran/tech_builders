@@ -2,7 +2,8 @@
 /* ──────────────────────────────────────────────────────────────
    MEETUPS — the only place to edit when you add an event.
    Past events (end time passed) drop off automatically; the hero
-   shows the next 2 at most, and an "empty" card when none are left.
+   shows the next 2 at most (dated first, then COMING_SOON), and an
+   "empty" card when there is nothing in either list.
    Times include the -05:00 offset (Quintana Roo, no DST).
    Preview another day: add ?date=2026-11-02 to the URL.
 ─────────────────────────────────────────────────────────────── */
@@ -29,7 +30,36 @@ const MEETUPS = [
       { label: "Eventbrite", url: "https://www.eventbrite.com.mx/e/beach-coworking-riviera-maya-tech-builders-tickets-2003791291694" }
     ],
     recap: "/events#past-events"
+  },
+  {
+    title: "Crea tu propio equipo de agentes de IA con Grok Bot",
+    chapter: "Cancún",
+    headline: "Build your own team of AI agents in Cancún",
+    note: "Cancún chapter · with Osuna AI & Universidad La Salle Cancún",
+    start: "2026-11-18T16:00:00-05:00",
+    end:   "2026-11-18T18:00:00-05:00",
+    time: "4:00 PM – 6:00 PM",
+    timeShort: "4 – 6 PM",
+    timeNote: "Hands-on workshop in Spanish",
+    venue: "Universidad La Salle Cancún",
+    address: "Carretera Cancún–Playa del Carmen Km 11.5, SM 299, 77560 Cancún, Q.R.",
+    price: "Free",
+    priceNote: "Limited seats, RSVP required",
+    description: "A hands-on workshop on building a team of AI agents with Grok Bot: give each agent a role, memory and access to real tools, then get them working together on real projects. With guest Nik Vassev, co-organized with Osuna AI & Data Solutions and hosted by Universidad La Salle Cancún.",
+    bring: [],
+    rsvp: "https://luma.com/wdnav1dj",
+    also: [
+      { label: "Meetup", url: "https://www.meetup.com/riviera-maya-tech-builders/events/317364493" }
+    ],
+    recap: "/events#past-events"
   }
+];
+
+/* COMING_SOON — chapters with a meetup in the works but no date yet.
+   Shown after the dated meetups as "date to be announced".
+   Remove the line once the meetup has a date and is in MEETUPS. */
+const COMING_SOON = [
+  { chapter: "Playa del Carmen", title: "Playa del Carmen meetup" }
 ];
 
 (function renderMeetups() {
@@ -55,6 +85,9 @@ const MEETUPS = [
   const list = MEETUPS.map((e) => ({ ...e, s: new Date(e.start), f: new Date(e.end) }));
   const upcoming = list.filter((e) => e.f > now).sort((a, b) => a.s - b.s).slice(0, 2);
   const last = list.filter((e) => e.f <= now).sort((a, b) => b.s - a.s)[0];
+  const soon = (typeof COMING_SOON !== "undefined" ? COMING_SOON : []).map((e) => ({ ...e, tba: true }));
+  const heroItems = upcoming.concat(soon).slice(0, 2);
+  const total = upcoming.length + soon.length;
 
   const d = (e) => ({
     mon: part(e.s, { month: "short" }).toUpperCase(),
@@ -77,7 +110,7 @@ const MEETUPS = [
 
   /* ── Hero card ─────────────────────────────── */
   let hero;
-  if (upcoming.length === 0) {
+  if (heroItems.length === 0) {
     hero = `
       <div class="meetup-strip is-empty">
         <div class="ms-body">
@@ -95,8 +128,8 @@ const MEETUPS = [
           <span class="ms-footer-link">See recap ${svg(I.arrow, 15, 2.2)}</span>
         </a>` : ""}
       </div>`;
-  } else if (upcoming.length === 1) {
-    const e = upcoming[0];
+  } else if (heroItems.length === 1 && !heroItems[0].tba) {
+    const e = heroItems[0];
     hero = `
       <div class="meetup-strip is-single">
         <div class="ms-body">
@@ -121,7 +154,15 @@ const MEETUPS = [
           <span class="ms-badge">${svg(I.cal, 12, 2.4)} UPCOMING MEETUPS</span>
           <a class="ms-all" href="/events">All events</a>
         </div>
-        ${upcoming.map((e) => `
+        ${heroItems.map((e) => e.tba ? `
+        <div class="ms-item is-tba">
+          <div class="ms-date ms-date-empty" aria-hidden="true">${svg(I.calPlus, 22, 1.8)}</div>
+          <div class="ms-info">
+            <span class="ms-title">${esc(e.title)}</span>
+            <span class="ms-meta">Date to be announced · stay tuned</span>
+          </div>
+          <a class="btn-rsvp btn-rsvp-sm btn-notify js-join" href="${JOIN_FORM}" ${ext} aria-label="Get notified about the ${esc(e.chapter)} meetup">Notify me</a>
+        </div>` : `
         <div class="ms-item">
           ${dateBox(e)}
           <div class="ms-info">
@@ -140,7 +181,17 @@ const MEETUPS = [
   // Per-page heading text: data-none / data-one ("event" = use the event's headline) / data-many
   const setHeading = (key, fallback) => { if (heading) heading.textContent = heading.dataset[key] || fallback; };
   let body;
-  if (upcoming.length === 0) {
+  const soonCards = soon.map((e) => `
+      <article class="event-soon">
+        <div class="es-icon" aria-hidden="true">${svg(I.calPlus, 28, 1.8)}</div>
+        <div class="es-text">
+          <span class="ms-badge">COMING SOON</span>
+          <h3>${esc(e.title)}</h3>
+          <p>The next ${esc(e.chapter)} meetup is in the works. Date to be announced, so stay tuned: members get the invite first.</p>
+        </div>
+        <a class="btn ghost js-join" href="${JOIN_FORM}" ${ext}>Get notified ${svg(I.arrow, 16, 2.2)}</a>
+      </article>`).join("");
+  if (total === 0) {
     setHeading("none", "Our next meetup is on its way");
     body = `
       <div class="event-empty">
@@ -154,9 +205,10 @@ const MEETUPS = [
         </div>
       </div>`;
   } else {
-    if (upcoming.length === 1) {
-      if (heading && heading.dataset.one === "event") heading.textContent = upcoming[0].headline;
-      else setHeading("one", heading ? heading.textContent : "");
+    if (total === 1) {
+      const useEvent = heading && heading.dataset.one === "event";
+      if (useEvent && upcoming.length === 1) heading.textContent = upcoming[0].headline;
+      else if (!useEvent) setHeading("one", heading ? heading.textContent : "");
     } else setHeading("many", heading ? heading.textContent : "");
     body = upcoming.map((e) => `
       <article class="event-feature">
@@ -188,7 +240,7 @@ const MEETUPS = [
             ${e.also && e.also.length ? `<span class="ef-also">Also on ${e.also.map((a) => `<a href="${esc(a.url)}" ${ext}>${esc(a.label)}</a>`).join(" and ")}</span>` : ""}
           </div>
         </div>
-      </article>`).join("");
+      </article>`).join("") + soonCards;
   }
   const listEl = document.getElementById("meetups-list");
   if (listEl) listEl.innerHTML = body;
