@@ -52,6 +52,28 @@ const MEETUPS = [
       { label: "Meetup", url: "https://www.meetup.com/riviera-maya-tech-builders/events/317364493" }
     ],
     recap: "/events#past-events"
+  },
+  {
+    title: "Tech Tuesday: Builders by the Beach",
+    chapter: "Playa del Carmen",
+    headline: "Builders by the beach in Playa del Carmen",
+    note: "Playa del Carmen chapter",
+    start: "2026-11-24T17:00:00-05:00",
+    end:   "2026-11-24T20:00:00-05:00",
+    time: "5:00 PM – 8:00 PM",
+    timeShort: "5 – 8 PM",
+    timeNote: "Live music from 8:30 PM if you stay",
+    venue: "Zenzi Beach",
+    address: "Calle 10 Norte 018, Centro, 77710 Playa del Carmen, Q.R.",
+    price: "Free",
+    priceNote: "RSVP so the venue can save seats",
+    description: "A relaxed afternoon by the beach to reconnect and welcome new faces. Share what you're building, swap ideas, get feedback or ask for help, or just come for a drink and good conversation. No presentations, no pitches, no laptop or slides needed. Please order something from the bar to support the venue.",
+    bring: ["Your ideas", "A project to share (optional)"],
+    rsvp: "https://luma.com/1wnfx4vs",
+    also: [
+      { label: "Meetup", url: "https://www.meetup.com/riviera-maya-tech-builders/events/317413720" }
+    ],
+    recap: "/events#past-events"
   }
 ];
 
@@ -59,7 +81,7 @@ const MEETUPS = [
    Shown after the dated meetups as "date to be announced".
    Remove the line once the meetup has a date and is in MEETUPS. */
 const COMING_SOON = [
-  { chapter: "Playa del Carmen", title: "Playa del Carmen meetup" }
+  // { chapter: "Playa del Carmen", title: "Playa del Carmen meetup" }
 ];
 
 (function renderMeetups() {
